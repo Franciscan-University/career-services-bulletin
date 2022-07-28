@@ -153,6 +153,7 @@ class SideComponent extends Component {
           </ListItem>
         </Link>
         <Divider />
+        {/*
         <Link to='/category/time-sensitive' className={classes.link}>
           <ListItem button>
             <ListItemIcon>
@@ -162,9 +163,11 @@ class SideComponent extends Component {
           </ListItem>
         </Link>
         <Divider />
+    */}
         <ListSubheader>Categories</ListSubheader>
         {displayCategories(this.props)}
         <Divider />
+        {/*
         <ListItem button onClick={this.toggleForm}>
           <ListItemIcon>
             <ClockIcon />
@@ -173,6 +176,7 @@ class SideComponent extends Component {
         </ListItem>
         {form}
         <Divider />
+  
         <ListItem
           button
           className={classes.btn}
@@ -181,6 +185,7 @@ class SideComponent extends Component {
           <ListItemText secondary={'Submit Announcement'} />
         </ListItem>
         <Divider />
+        */}
       </div>
     )
     return (
