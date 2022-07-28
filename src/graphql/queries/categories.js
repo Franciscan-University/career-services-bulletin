@@ -20,7 +20,7 @@ export const getCategories = gql`
 
 export const getAllCategories = gql`
   query getAllCategories {
-    categories {
+    categories(first:40) {
       ...CategoryData
     }
   }
