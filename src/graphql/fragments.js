@@ -14,6 +14,7 @@ export const postFragment = gql`
         title
         date
         slug
+        jobTitleInput
         excerpt
         content
         categories {
