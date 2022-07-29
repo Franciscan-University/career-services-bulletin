@@ -77,6 +77,7 @@ class PostPreview extends React.Component {
     const {
       classes,
       title,
+      job_title,
       imageURL,
       date,
       featuredImage,
@@ -92,6 +93,7 @@ class PostPreview extends React.Component {
           <CardView
             classes={classes}
             title={title}
+            job_title={job_title}
             imageURL={imageURL}
             postDate={postDate}
             slug={slug}
@@ -115,6 +117,7 @@ class PostPreview extends React.Component {
 const CardView = ({
   classes,
   title,
+  job_title,
   slug,
   imageURL,
   postDate,
@@ -138,6 +141,9 @@ const CardView = ({
         </Typography>
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
+        </Typography>
+        <Typography className={classes.dateColor} variant='overline'>
+          {job_title}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
           <div>
