@@ -29,6 +29,7 @@ export const SinglePostDetail = gql`
       id
       slug
       title
+      job_title_input
       date
       content
       categories {
