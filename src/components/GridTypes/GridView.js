@@ -52,6 +52,7 @@ class GridView extends React.Component {
                   }
                   slug={post.node.slug}
                   title={post.node.title}
+                  jobTitleInput={post.node.jobTitleInput}
                   category={post.node.categories.edges[1].node.name}
                   content={post.node.excerpt}
                   trim
