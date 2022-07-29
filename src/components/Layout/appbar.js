@@ -50,7 +50,7 @@ const TopBar = ({
             className={classNames(classes.flex, classes.typo)}
             noWrap
           >
-            Career Services Bulletin
+            Career Services Bulletin and Job Board
           </Typography>
 
           {showSearch ? (
