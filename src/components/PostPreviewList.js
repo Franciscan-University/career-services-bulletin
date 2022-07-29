@@ -65,7 +65,7 @@ class PostPreviewList extends React.Component {
           <CardView
             classes={classes}
             title={title}
-            jobTitleInput={post.node.jobTitleInput}
+            jobTitleInput={jobTitleInput}
             imageURL={imageURL}
             postDate={postDate}
             slug={slug}
