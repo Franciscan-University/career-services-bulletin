@@ -32,6 +32,9 @@ const styles = {
   printVAtt: {
     width: 'auto',
     fontSize: '18px'
+  },
+  jobTitleStyle: {
+    color: '#000000'
   }
 }
 
@@ -112,7 +115,7 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        <Typography className={classes.dateColor} variant='overline'>
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
           {jobTitleInput}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
