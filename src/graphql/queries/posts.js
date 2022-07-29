@@ -31,7 +31,6 @@ export const SinglePostDetail = gql`
       title
       date
       content
-      job_title
       categories {
         edges {
           node {
