@@ -50,6 +50,7 @@ class PostPreviewList extends React.Component {
     const {
       classes,
       title,
+      jobTitleInput,
       imageURL,
       date,
       slug,
@@ -110,6 +111,9 @@ const CardView = ({
         </Typography>
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
+        </Typography>
+        <Typography className={classes.dateColor} variant='overline'>
+          {jobTitleInput}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
           <div className='list-view-single-announcement'>
