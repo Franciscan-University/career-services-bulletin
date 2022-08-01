@@ -122,7 +122,7 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        {jobTitleInput == 0 ? <Typography>empty</Typography> : null}<Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>:
+        {jobTitleInput == 0 ? <Typography>empty</Typography> : <Typography>hi</Typography>}<Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>:
           {jobTitleInput}
         </Typography>
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
