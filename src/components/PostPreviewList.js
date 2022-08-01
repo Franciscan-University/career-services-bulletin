@@ -89,6 +89,9 @@ class PostPreviewList extends React.Component {
         )}
       </div>
     )
+    if (jobLocationInput == '0') {
+      jobLocationInput = '';
+    }
   }
 }
 
