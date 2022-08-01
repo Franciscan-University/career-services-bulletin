@@ -124,7 +124,7 @@ const CardView = ({
         </Typography>
         
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>:
-          {jobTitleInput}
+          {jobTitleInput} hi
         </Typography>
         
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
