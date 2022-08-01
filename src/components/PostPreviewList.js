@@ -92,10 +92,6 @@ class PostPreviewList extends React.Component {
   }
 }
 
-if (jobLocationInput == '0') {
-  jobLocationInput = '';
-}
-
 const CardView = ({
   classes,
   title,
@@ -125,8 +121,13 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
+        {this.jobTitleInput.value == 0 ? <Typography>data</Typography>:null }
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>:
+          {jobTitleInput}
+        </Typography>
+        {this.jobLocationInput.value == 0 ? <Typography>data</Typography>:null }
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          {jobTitleInput} | {jobLocationInput}
+          {jobLocationInput}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
           <div className='list-view-single-announcement'>
