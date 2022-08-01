@@ -30,6 +30,8 @@ export const SinglePostDetail = gql`
       slug
       title
       jobTitleInput
+      jobLocationInput
+      postBannerImg
       date
       content
       categories {

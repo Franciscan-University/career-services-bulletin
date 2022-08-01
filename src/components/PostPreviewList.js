@@ -54,6 +54,8 @@ class PostPreviewList extends React.Component {
       classes,
       title,
       jobTitleInput,
+      jobLocationInput,
+      postBannerImg,
       imageURL,
       date,
       slug,
@@ -69,6 +71,8 @@ class PostPreviewList extends React.Component {
             classes={classes}
             title={title}
             jobTitleInput={jobTitleInput}
+            jobLocationInput={jobLocationInput}
+            postBannerImg={postBannerImg}
             imageURL={imageURL}
             postDate={postDate}
             slug={slug}
@@ -92,6 +96,8 @@ const CardView = ({
   classes,
   title,
   jobTitleInput,
+  jobLocationInput,
+  postBannerImg,
   slug,
   imageURL,
   postDate,
@@ -116,7 +122,7 @@ const CardView = ({
           {postDate}
         </Typography>
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          {jobTitleInput}
+          {jobTitleInput} | {jobLocationInput}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
           <div className='list-view-single-announcement'>

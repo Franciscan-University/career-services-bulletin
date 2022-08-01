@@ -78,6 +78,8 @@ class PostPreview extends React.Component {
       classes,
       title,
       jobTitleInput,
+      jobLocationInput,
+      postBannerImg,
       imageURL,
       date,
       featuredImage,
@@ -94,6 +96,8 @@ class PostPreview extends React.Component {
             classes={classes}
             title={title}
             jobTitleInput={jobTitleInput}
+            jobLocationInput={jobLocationInput}
+            postBannerImg={postBannerImg}
             imageURL={imageURL}
             postDate={postDate}
             slug={slug}
@@ -118,6 +122,8 @@ const CardView = ({
   classes,
   title,
   jobTitleInput,
+  jobLocationInput,
+  postBannerImg,
   slug,
   imageURL,
   postDate,
