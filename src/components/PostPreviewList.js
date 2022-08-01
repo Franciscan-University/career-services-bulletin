@@ -34,7 +34,8 @@ const styles = {
     fontSize: '18px'
   },
   jobTitleStyle: {
-    color: '#000000'
+    color: '#000000',
+    marginBottom: '5px'
   }
 }
 
@@ -121,7 +122,7 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        {jobTitleInput == 0 ? <Typography></Typography>: null }
+        
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>:
           {jobTitleInput}
         </Typography>
