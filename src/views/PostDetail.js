@@ -63,6 +63,9 @@ const PostDetail = ({ data, classes, ...props }) => {
 const RenderPost = ({ data, classes, ...props }) => {
   const post = data.postBy
   const date = new Date(post.date).toLocaleDateString()
+
+  const docString = post.postBannerImg
+  console.log(docString)
   return (
     <div>
       <Helmet>
