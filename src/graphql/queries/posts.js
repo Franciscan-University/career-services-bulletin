@@ -31,6 +31,7 @@ export const SinglePostDetail = gql`
       title
       jobTitleInput
       jobLocationInput
+      jobWorkdayInput
       postBannerImg
       date
       content

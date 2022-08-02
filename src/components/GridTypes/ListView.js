@@ -58,6 +58,7 @@ class ListView extends React.Component {
                 title={post.node.title}
                 jobTitleInput={post.node.jobTitleInput}
                 jobLocationInput={post.node.jobLocationInput}
+                jobWorkdayInput={post.node.jobWorkdayInput}
                 postBannerImg={post.node.postBannerImg}
                 category={post.node.categories.edges[0].node.name}
                 content={post.node.content}

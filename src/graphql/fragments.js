@@ -16,6 +16,7 @@ export const postFragment = gql`
         slug
         jobTitleInput
         jobLocationInput
+        jobWorkdayInput
         postBannerImg
         excerpt
         content
