@@ -60,24 +60,13 @@ const PostDetail = ({ data, classes, ...props }) => {
   )
 }
 
-var docString = post.postBannerImg
-const displayFiles = React.createClass({
-  render: function() {
-    var docArray = docString.split(',');
-
-    return (
-      <Typography>
-      {docArray.map(function(name, index){
-        return <Typography key={index}>{name}</Typography>
-      })}
-      </Typography>
-    )
-  }
-})
 
 const RenderPost = ({ data, classes, ...props }) => {
   const post = data.postBy
   const date = new Date(post.date).toLocaleDateString()
+
+  var docString = post.postBannerImg
+  var docArray = docString.split(',');
 
   return (
     <div>
@@ -116,7 +105,12 @@ const RenderPost = ({ data, classes, ...props }) => {
           <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInput}
         </Typography>
         }
-        {displayFiles}
+        
+      <Typography>
+      {docArray.map(function(name, index){
+        return <Typography key={index}>{name}</Typography>
+      })}
+      </Typography>
 
       <Typography
         type='body2'
