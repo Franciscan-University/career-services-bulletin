@@ -69,15 +69,10 @@ const RenderPost = ({ data, classes, ...props }) => {
   var docHTML
 
   for (var i=0; i< docArray.length; i++) {
-    if (docHTML == null) {
-      docHTML = <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+      docHTML_add = <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
       {docArray[i]}
     </Typography>
-    } else {
-      docHTML = docHTML + <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-    {docArray[i]}
-  </Typography>
-    }
+    docHTML = Object.assign(docHTML, docHTML_add)
     
     console.log(typeof docHTML)
   }
