@@ -5,9 +5,9 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import RoomIcon from '@material-ui/icons/Room';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import { Link } from 'react-router-dom'
 import SanitizedHTML from 'react-sanitized-html'
 
@@ -112,7 +112,7 @@ const CardView = ({
   style,
   category,
   content,
-  handleContentPasteIcon
+  handleAssignmentIcon
 }) => (
   <div>
     <Card className={classes.card} style={style}>
@@ -142,11 +142,11 @@ const CardView = ({
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
           <IconButton
-                onClick={handleContentPasteIcon}
+                onClick={handleAssignmentIcon}
                 color='primary'
                 aria-label='More'
               >
-                <PrintIcon />
+                <AssignmentIcon />
                 </IconButton>{jobWorkdayInput}
         </Typography>
         }
