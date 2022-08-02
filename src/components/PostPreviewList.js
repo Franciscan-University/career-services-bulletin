@@ -41,6 +41,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: '5px'
+  },
+  iconStyle: {
+    marginRight: '2px'
   }
 }
 
@@ -133,17 +136,17 @@ const CardView = ({
         </Typography>
         {jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AssignmentIcon /> {jobTitleInput}
+          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInput}
         </Typography>
         }
         {jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon /> {jobLocationInput}
+          <RoomIcon className={classes.iconStyle} /> {jobLocationInput}
         </Typography>
         }
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon /> {jobWorkdayInput}
+          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInput}
         </Typography>
         }
         <Typography component='div' variant='body2' gutterBottom>
