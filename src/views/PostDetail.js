@@ -65,7 +65,10 @@ const RenderPost = ({ data, classes, ...props }) => {
   const date = new Date(post.date).toLocaleDateString()
 
   const docString = post.postBannerImg
-  console.log(docString)
+  const docArray = docString.split(',')
+  for (var i=0; i< docArray.length; i++) {
+    console.log(docArray[i])
+  }
   return (
     <div>
       <Helmet>
