@@ -66,10 +66,12 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   const docString = post.postBannerImg
   const docArray = docString.split(',')
-  var docHTML;
+  var docHTML = ''
 
   for (var i=0; i< docArray.length; i++) {
-    docHTML = docHTML + 'ur mom'
+    docHTML = docHTML + <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+    {docArray[i]}
+  </Typography>
     console.log(docHTML)
   }
   return (
