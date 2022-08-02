@@ -69,7 +69,7 @@ const RenderPost = ({ data, classes, ...props }) => {
   var docHTML = ''
 
   for (var i=0; i< docArray.length; i++) {
-    docHTML = docHTML + <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+    docHTML = <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
     {docArray[i]}
   </Typography>
     console.log(docHTML)
