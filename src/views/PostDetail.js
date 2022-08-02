@@ -79,7 +79,7 @@ const RenderPost = ({ data, classes, ...props }) => {
   </Typography>
     }
     
-    console.log(docHTML)
+    console.log(typeof docHTML)
   }
   return (
     <div>
