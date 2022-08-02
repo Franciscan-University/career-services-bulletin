@@ -66,6 +66,7 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   const docString = post.postBannerImg
   const docArray = docString.split(',')
+  var docHTML;
 
   for (var i=0; i< docArray.length; i++) {
     docHTML = docHTML + 'ur mom'
