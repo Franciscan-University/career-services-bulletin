@@ -38,6 +38,8 @@ const styles = {
   },
   jobTitleStyle: {
     color: '#000000',
+    display: 'flex',
+    alignItems: 'center',
     marginBottom: '5px'
   }
 }
@@ -131,17 +133,17 @@ const CardView = ({
         </Typography>
         {jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AssignmentIcon />{jobTitleInput}
+          <AssignmentIcon /> {jobTitleInput}
         </Typography>
         }
         {jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon />{jobLocationInput}
+          <RoomIcon /> {jobLocationInput}
         </Typography>
         }
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon />{jobWorkdayInput}
+          <AccessTimeIcon /> {jobWorkdayInput}
         </Typography>
         }
         <Typography component='div' variant='body2' gutterBottom>
