@@ -116,8 +116,7 @@ const CardView = ({
   id,
   style,
   category,
-  content,
-  handleAssignmentIcon
+  content
 }) => (
   <div>
     <Card className={classes.card} style={style}>

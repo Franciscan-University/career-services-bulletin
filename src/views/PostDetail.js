@@ -8,6 +8,9 @@ import Typography from '@material-ui/core/Typography'
 import { blue, grey } from '@material-ui/core/colors'
 import { withStyles } from '@material-ui/core/styles'
 import BackIcon from '@material-ui/icons/ArrowBackIos'
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import RoomIcon from '@material-ui/icons/Room';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import Button from '@material-ui/core/Button'
 import { withRouter } from 'react-router-dom'
 import SanitizedHTML from 'react-sanitized-html'
@@ -32,6 +35,15 @@ const styles = {
   link: {
     color: 'inherit',
     textDecoration: 'none'
+  },
+  jobTitleStyle: {
+    color: '#000000',
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '5px'
+  },
+  iconStyle: {
+    marginRight: '2px'
   }
 }
 
@@ -70,8 +82,24 @@ const RenderPost = ({ data, classes, ...props }) => {
         <SanitizedHTML html={post.title} />
       </Typography>
       <Typography type='subheading' variant='subtitle1'>
-        {date}hi
+        {date}
       </Typography>
+
+      {post.jobTitleInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+          <AssignmentIcon className={classes.iconStyle} /> {post.jobTitleInput}
+        </Typography>
+        }
+        {post.jobLocationInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+          <RoomIcon className={classes.iconStyle} /> {post.jobLocationInput}
+        </Typography>
+        }
+        {post.jobWorkdayInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+          <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInput}
+        </Typography>
+        }
 
       <Typography
         type='body2'
