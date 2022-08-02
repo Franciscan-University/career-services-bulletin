@@ -5,7 +5,6 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
-import IconButton from '@material-ui/core/IconButton'
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import RoomIcon from '@material-ui/icons/Room';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
@@ -132,23 +131,17 @@ const CardView = ({
         </Typography>
         {jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          {jobTitleInput}
+          <AssignmentIcon />{jobTitleInput}
         </Typography>
         }
         {jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          {jobLocationInput}
+          <RoomIcon />{jobLocationInput}
         </Typography>
         }
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <IconButton
-                onClick={handleAssignmentIcon}
-                color='primary'
-                aria-label='More'
-              >
-                <AssignmentIcon />
-                </IconButton>{jobWorkdayInput}
+          <AccessTimeIcon />{jobWorkdayInput}
         </Typography>
         }
         <Typography component='div' variant='body2' gutterBottom>
