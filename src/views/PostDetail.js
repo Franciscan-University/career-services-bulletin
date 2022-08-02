@@ -60,9 +60,9 @@ const PostDetail = ({ data, classes, ...props }) => {
   )
 }
 
+var docString = post.postBannerImg
 const displayFiles = React.createClass({
   render: function() {
-    var docString = post.postBannerImg
     var docArray = docString.split(',');
 
     return (
