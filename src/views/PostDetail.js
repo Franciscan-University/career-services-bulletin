@@ -70,7 +70,7 @@ const RenderPost = ({ data, classes, ...props }) => {
         <SanitizedHTML html={post.title} />
       </Typography>
       <Typography type='subheading' variant='subtitle1'>
-        {date}
+        {date}hi
       </Typography>
 
       <Typography
