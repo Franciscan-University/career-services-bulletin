@@ -111,6 +111,7 @@ const RenderPost = ({ data, classes, ...props }) => {
           <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInput}
         </Typography>
         }
+        {docHTML}
 
       <Typography
         type='body2'
