@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import AttachmentIcon from '@material-ui/icons/Attachment';
 import RoomIcon from '@material-ui/icons/Room';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import { Link } from 'react-router-dom'
@@ -107,6 +108,8 @@ class PostPreviewList extends React.Component {
             category={category}
             content={this.props.content}
             docString={docString}
+            docNameArray={docNameArray}
+            docFileArray={docFileArray}
           />
         ) : (
           <PlainView
