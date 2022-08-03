@@ -139,7 +139,9 @@ const CardView = ({
   style,
   category,
   content,
-  docString
+  docString,
+  docNameArray,
+  docFileArray
 }) => (
   <div>
     <Card className={classes.card} style={style}>
