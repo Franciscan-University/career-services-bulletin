@@ -103,6 +103,24 @@ class PostPreviewList extends React.Component {
   }
 }
 
+var docString = post.postBannerImg
+var docArray = docString.split(',');
+var docNameArray = []
+var docFileArray = []
+
+for (var i=0; i<docArray.length; i++) {
+  var tempArray = docArray[i].split('|');
+  docNameArray.push(tempArray[0]);
+  docFileArray.push(tempArray[1]);
+}
+
+var docNameFilter = docNameArray.filter(function (el) {
+  return el != '';
+})
+
+docNameArray = docNameFilter;
+console.log(docString);
+
 const CardView = ({
   classes,
   title,

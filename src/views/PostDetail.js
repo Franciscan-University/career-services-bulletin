@@ -23,7 +23,9 @@ const styles = {
     marginBottom: 15
   },
   titleColor: {
-    color: '#21412a'
+    color: '#21412a',
+    fontSize: '0.9em',
+    fontWeight: '500'
   },
   dateColor: {
     color: grey[500]
@@ -38,6 +40,9 @@ const styles = {
     color: 'inherit',
     textDecoration: 'none'
   },
+  jobTitleStyleFirst: {
+    marginTop: '2em'
+  },
   jobTitleStyle: {
     color: '#000000',
     display: 'flex',
@@ -46,6 +51,9 @@ const styles = {
   },
   iconStyle: {
     marginRight: '2px'
+  },
+  postContent: {
+    paddingBottom: '2em'
   },
   attachmentStyle: {
     display: 'flex',
@@ -116,7 +124,7 @@ const RenderPost = ({ data, classes, ...props }) => {
       </Typography>
 
       {post.jobTitleInput == 0 ? <Typography></Typography> : 
-        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+        <Typography paragraph='true' className={`${classes.jobTitleStyle} ${classes.jobTitleStyleFirst}`} variant='overline'>
           <AssignmentIcon className={classes.iconStyle} /> {post.jobTitleInput}
         </Typography>
         }
@@ -134,12 +142,13 @@ const RenderPost = ({ data, classes, ...props }) => {
       <Typography
         type='body2'
         component='div'
+        className={classes.postContent}
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
       <Typography>
       {docNameArray.map(function(name, index){
-        return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]}><AttachmentIcon /> {name}</Link>
+        return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</Link>
       })}
       </Typography>
 
