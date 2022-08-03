@@ -146,11 +146,13 @@ const RenderPost = ({ data, classes, ...props }) => {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
+        {docString == '' ? <Typography></Typography> : 
       <Typography>
       {docNameArray.map(function(name, index){
         return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</Link>
       })}
       </Typography>
+      }
 
       <Button onClick={props.history.goBack} className={classes.backBtn}>
         <BackIcon />
