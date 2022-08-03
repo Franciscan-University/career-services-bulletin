@@ -88,7 +88,6 @@ class PostPreviewList extends React.Component {
       style,
       category,
       view,
-      docString
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
     return (
@@ -107,6 +106,7 @@ class PostPreviewList extends React.Component {
             style={style}
             category={category}
             content={this.props.content}
+            docString={docString}
           />
         ) : (
           <PlainView
