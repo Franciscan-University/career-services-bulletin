@@ -74,6 +74,7 @@ class PostPreviewList extends React.Component {
     var docNameFilter = docNameArray.filter(function (el) {
       return el != '';
     })
+    console.log(docString);
 
     docNameArray = docNameFilter;
     const {
