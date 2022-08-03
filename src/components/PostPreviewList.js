@@ -103,7 +103,7 @@ class PostPreviewList extends React.Component {
   }
 }
 
-var docString = post.postBannerImg
+var docString = postBannerImg
 var docArray = docString.split(',');
 var docNameArray = []
 var docFileArray = []
