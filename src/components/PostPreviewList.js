@@ -181,6 +181,7 @@ const CardView = ({
             />
           </div>
         </Typography>
+        <Typography>{docString} Hello there</Typography>
 
         {docString == '' ? <Typography>{docString} hi</Typography> : 
       <Typography>

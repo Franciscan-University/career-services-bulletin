@@ -24,7 +24,7 @@ const styles = {
   },
   titleColor: {
     color: '#21412a',
-    fontSize: '0.9em',
+    fontSize: '1.8em',
     fontWeight: '500'
   },
   dateColor: {
