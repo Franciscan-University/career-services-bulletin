@@ -27,7 +27,7 @@ const displayCategories = props => {
   if (data.loading) return
 
   return (
-    <div style="height: auto; min-height: 103vh; padding-bottom: 3em;">
+    <div style={{height: 'auto', minHeight: '103vh', paddingBottom: '3em'}}>
       <Link to={`/all`} className={classes.link}>
         <ListItem button>
           <ListItemText secondary={`All`} />
