@@ -155,11 +155,23 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        <Typography paragraph='true' display='block' className={classes.dateColor} variant='overline'>
-        {jobTitleInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}>{jobTitleInput}</Typography>} 
-        {jobLocationInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}> | {jobLocationInput}</Typography>} 
-        {jobWorkdayInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}> | {jobWorkdayInput}</Typography>}
+
+        {jobTitleInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={`${classes.jobTitleStyle} ${classes.jobTitleStyleFirst}`} variant='overline'>
+          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInput}
         </Typography>
+        }
+        {jobLocationInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+          <RoomIcon className={classes.iconStyle} /> {jobLocationInput}
+        </Typography>
+        }
+        {jobWorkdayInput == 0 ? <Typography></Typography> : 
+        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
+          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInput}
+        </Typography>
+        }
+
         <Typography component='div' variant='body2' gutterBottom>
           <div>
             <SanitizedHTML style={{ display: 'inline' }} html={content} />

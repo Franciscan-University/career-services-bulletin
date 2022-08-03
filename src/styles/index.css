@@ -11,6 +11,11 @@ p {
 
 a {
   color: #8b3a19;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 header {

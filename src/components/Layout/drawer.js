@@ -41,9 +41,11 @@ const displayCategories = props => {
             to={`/category/${category.node.slug}`}
             className={classes.link}
           >
+          {category.node.name == 'Uncategorized' ? null :
             <ListItem button>
               <ListItemText secondary={category.node.name} />
             </ListItem>
+          }
           </Link>
         ))}
     </div>
