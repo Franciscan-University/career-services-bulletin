@@ -21,11 +21,6 @@ import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
 import fuslogo from './img/fuslogo.png'
 
-const styles = {
-  addedDrawerStyle: {
-    paddingBottom: '2em'
-  }
-}
 
 const displayCategories = props => {
   const { data, classes } = props
@@ -64,6 +59,9 @@ class SideComponent extends Component {
     year: '',
     formStyles: {
       display: 'none'
+    },
+    urmom: {
+      paddingBottom: '2em'
     }
   }
   handleChange = name => event => {
@@ -140,60 +138,62 @@ class SideComponent extends Component {
       </form>
     )
     const drawer = (
-      <div className={`${classes.drawerInner} ${classes.addedDrawerStyle}`}>
-        <div className={classes.drawerHeader}>
-          <ListItem>
-            <Link to='/all'>
-              <img className={classes.image} alt='logo' src={fuslogo} />
-            </Link>
-          </ListItem>
-          <IconButton
-            className={classes.navIconHide}
-            onClick={this.props.handleDrawerClose}
-          >
-            <ChevronLeftIcon />
-          </IconButton>
-        </div>
-        <Divider />
-        <Link to='/' className={classes.link}>
-          <ListItem button>
-            <ListItemText secondary='Current Bulletin' />
-          </ListItem>
-        </Link>
-        <Divider />
-        {/*
-        <Link to='/category/time-sensitive' className={classes.link}>
-          <ListItem button>
+      <div className={this.state.urmom}>
+        <div className={classes.drawerInner}>
+          <div className={classes.drawerHeader}>
+            <ListItem>
+              <Link to='/all'>
+                <img className={classes.image} alt='logo' src={fuslogo} />
+              </Link>
+            </ListItem>
+            <IconButton
+              className={classes.navIconHide}
+              onClick={this.props.handleDrawerClose}
+            >
+              <ChevronLeftIcon />
+            </IconButton>
+          </div>
+          <Divider />
+          <Link to='/' className={classes.link}>
+            <ListItem button>
+              <ListItemText secondary='Current Bulletin' />
+            </ListItem>
+          </Link>
+          <Divider />
+          {/*
+          <Link to='/category/time-sensitive' className={classes.link}>
+            <ListItem button>
+              <ListItemIcon>
+                <AlarmClock />
+              </ListItemIcon>
+              <ListItemText secondary='Take Action' />
+            </ListItem>
+          </Link>
+          <Divider />
+      */}
+          <ListSubheader>Categories</ListSubheader>
+          {displayCategories(this.props)}
+          <Divider />
+          {/*
+          <ListItem button onClick={this.toggleForm}>
             <ListItemIcon>
-              <AlarmClock />
+              <ClockIcon />
             </ListItemIcon>
-            <ListItemText secondary='Take Action' />
+            <ListItemText secondary='Filter By Date' />
           </ListItem>
-        </Link>
-        <Divider />
-    */}
-        <ListSubheader>Categories</ListSubheader>
-        {displayCategories(this.props)}
-        <Divider />
-        {/*
-        <ListItem button onClick={this.toggleForm}>
-          <ListItemIcon>
-            <ClockIcon />
-          </ListItemIcon>
-          <ListItemText secondary='Filter By Date' />
-        </ListItem>
-        {form}
-        <Divider />
-  
-        <ListItem
-          button
-          className={classes.btn}
-          onClick={this.props.toggleDrawer}
-        >
-          <ListItemText secondary={'Submit Announcement'} />
-        </ListItem>
-        <Divider />
-        */}
+          {form}
+          <Divider />
+    
+          <ListItem
+            button
+            className={classes.btn}
+            onClick={this.props.toggleDrawer}
+          >
+            <ListItemText secondary={'Submit Announcement'} />
+          </ListItem>
+          <Divider />
+          */}
+        </div>
       </div>
     )
     return (
@@ -236,4 +236,4 @@ class SideComponent extends Component {
   ]
 }
 
-export default graphql(getAllCategories)(SideComponent)(withStyles(styles))
+export default graphql(getAllCategories)(SideComponent)
