@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography'
 import { blue, grey } from '@material-ui/core/colors'
 import { withStyles } from '@material-ui/core/styles'
 import BackIcon from '@material-ui/icons/ArrowBackIos'
+import AttachmentIcon from '@material-ui/icons/Attachment';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import RoomIcon from '@material-ui/icons/Room';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
@@ -123,7 +124,7 @@ const RenderPost = ({ data, classes, ...props }) => {
 
       <Typography>
       {docNameArray.map(function(name, index){
-        return <Link key={index} href="{name}">{name} - {docFileArray[index]}</Link>
+        return <Link key={index} href="{docFileArray[index]}"><BackIcon /> {name}</Link>
       })}
       </Typography>
 
