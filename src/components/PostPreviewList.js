@@ -182,7 +182,7 @@ const CardView = ({
           </div>
         </Typography>
 
-        {docString == '' ? <Typography></Typography> : 
+        {docString == '' ? <Typography>{docString} hi</Typography> : 
       <Typography>
       {docNameArray.map(function(name, index){
         return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</Link>
