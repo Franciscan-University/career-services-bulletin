@@ -49,7 +49,11 @@ const styles = {
   },
   attachmentStyle: {
     display: 'flex',
-    marginBottom: '8px'
+    marginBottom: '8px',
+    width: 'fit-content'
+  },
+  backBtn: {
+    marginTop: '3em'
   }
 }
 
@@ -135,11 +139,11 @@ const RenderPost = ({ data, classes, ...props }) => {
 
       <Typography>
       {docNameArray.map(function(name, index){
-        return <Link className={classes.attachmentStyle} key={index} href="{docFileArray[index]}"><AttachmentIcon /> {name}</Link>
+        return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]}><AttachmentIcon /> {name}</Link>
       })}
       </Typography>
 
-      <Button onClick={props.history.goBack}>
+      <Button onClick={props.history.goBack} className={classes.backBtn}>
         <BackIcon />
         Go Back
       </Button>

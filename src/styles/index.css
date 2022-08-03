@@ -9,6 +9,10 @@ p {
   line-height: 1.5;
 }
 
+a {
+  color: #8b3a19;
+}
+
 header {
   padding-right: 0 !important;
 }
