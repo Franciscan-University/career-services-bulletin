@@ -122,8 +122,8 @@ const RenderPost = ({ data, classes, ...props }) => {
       />
 
       <Typography>
-      {docArray.map(function(name, index){
-        return <Link key={index} href="{name}">{name} - {index}</Link>
+      {docNameArray.map(function(name, index){
+        return <Link key={index} href="{name}">{name} - {docFileArray[index]}</Link>
       })}
       </Typography>
 
