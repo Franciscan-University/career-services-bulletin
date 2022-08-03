@@ -60,24 +60,6 @@ const CardImage = ({ mediaStyle, imageURL, slug }) => {
 
 class PostPreviewList extends React.Component {
   render () {
-    var docString = postBannerImg
-    var docArray = docString?.split(',');
-    var docNameArray = []
-    var docFileArray = []
-
-    for (var i=0; i<docArray?.length; i++) {
-      var tempArray = docArray[i]?.split('|');
-      docNameArray.push(tempArray[0]);
-      docFileArray.push(tempArray[1]);
-    }
-
-    var docNameFilter = docNameArray.filter(function (el) {
-      return el != '';
-    })
-    console.log(postBannerImg + '2');
-
-
-    docNameArray = docNameFilter;
 
     const {
       classes,
@@ -93,7 +75,24 @@ class PostPreviewList extends React.Component {
       category,
       view,
     } = this.props
-    console.log(postBannerImg + '3');
+    
+    var docString = postBannerImg
+    var docArray = docString?.split(',');
+    var docNameArray = []
+    var docFileArray = []
+
+    for (var i=0; i<docArray?.length; i++) {
+      var tempArray = docArray[i]?.split('|');
+      docNameArray.push(tempArray[0]);
+      docFileArray.push(tempArray[1]);
+    }
+
+    var docNameFilter = docNameArray.filter(function (el) {
+      return el != '';
+    })
+
+
+    docNameArray = docNameFilter;
 
     const postDate = new Date(date).toLocaleDateString()
     return (
