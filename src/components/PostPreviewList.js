@@ -134,7 +134,8 @@ const CardView = ({
   id,
   style,
   category,
-  content
+  content,
+  docString
 }) => (
   <div>
     <Card className={classes.card} style={style}>
@@ -182,7 +183,7 @@ const CardView = ({
       })}
       </Typography>
       }
-      
+
       </CardContent>
     </Card>
   </div>
