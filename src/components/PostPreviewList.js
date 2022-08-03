@@ -60,7 +60,7 @@ const CardImage = ({ mediaStyle, imageURL, slug }) => {
 
 class PostPreviewList extends React.Component {
   render () {
-    var docString = data.postBy.node.postBannerImg
+    var docString = postBannerImg
     var docArray = docString?.split(',');
     var docNameArray = []
     var docFileArray = []
@@ -74,9 +74,11 @@ class PostPreviewList extends React.Component {
     var docNameFilter = docNameArray.filter(function (el) {
       return el != '';
     })
-    console.log(docString);
+    console.log(postBannerImg + '2');
+
 
     docNameArray = docNameFilter;
+
     const {
       classes,
       title,
@@ -91,6 +93,8 @@ class PostPreviewList extends React.Component {
       category,
       view,
     } = this.props
+    console.log(postBannerImg + '3');
+
     const postDate = new Date(date).toLocaleDateString()
     return (
       <div>
@@ -124,7 +128,7 @@ class PostPreviewList extends React.Component {
   }
 }
 
-
+console.log(postBannerImg + '1');
 
 const CardView = ({
   classes,
