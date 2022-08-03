@@ -128,7 +128,6 @@ class PostPreviewList extends React.Component {
   }
 }
 
-console.log(postBannerImg + '1');
 
 const CardView = ({
   classes,
