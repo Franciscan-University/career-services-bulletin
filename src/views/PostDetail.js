@@ -46,6 +46,9 @@ const styles = {
   },
   iconStyle: {
     marginRight: '2px'
+  },
+  attachmentStyle: {
+    display: 'block'
   }
 }
 
@@ -77,6 +80,8 @@ const RenderPost = ({ data, classes, ...props }) => {
     docNameArray.push(tempArray[0]);
     docFileArray.push(tempArray[1]);
   }
+  console.log(docNameArray)
+
 
   return (
     <div>
@@ -124,7 +129,7 @@ const RenderPost = ({ data, classes, ...props }) => {
 
       <Typography>
       {docNameArray.map(function(name, index){
-        return <Link key={index} href="{docFileArray[index]}"><BackIcon /> {name}</Link>
+        return <Link className={classes.attachmentStyle} key={index} href="{docFileArray[index]}"><AttachmentIcon /> {name}</Link>
       })}
       </Typography>
 
