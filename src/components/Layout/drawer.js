@@ -135,62 +135,60 @@ class SideComponent extends Component {
       </form>
     )
     const drawer = (
-      <div className={this.state.urmom}>
-        <div className={classes.drawerInner}>
-          <div className={classes.drawerHeader}>
-            <ListItem>
-              <Link to='/all'>
-                <img className={classes.image} alt='logo' src={fuslogo} />
-              </Link>
-            </ListItem>
-            <IconButton
-              className={classes.navIconHide}
-              onClick={this.props.handleDrawerClose}
-            >
-              <ChevronLeftIcon />
-            </IconButton>
-          </div>
-          <Divider />
-          <Link to='/' className={classes.link}>
-            <ListItem button>
-              <ListItemText secondary='Current Bulletin' />
-            </ListItem>
-          </Link>
-          <Divider />
-          {/*
-          <Link to='/category/time-sensitive' className={classes.link}>
-            <ListItem button>
-              <ListItemIcon>
-                <AlarmClock />
-              </ListItemIcon>
-              <ListItemText secondary='Take Action' />
-            </ListItem>
-          </Link>
-          <Divider />
-      */}
-          <ListSubheader>Categories</ListSubheader>
-          {displayCategories(this.props)}
-          <Divider />
-          {/*
-          <ListItem button onClick={this.toggleForm}>
-            <ListItemIcon>
-              <ClockIcon />
-            </ListItemIcon>
-            <ListItemText secondary='Filter By Date' />
+      <div className={classes.drawerInner}>
+        <div className={classes.drawerHeader}>
+          <ListItem>
+            <Link to='/all'>
+              <img className={classes.image} alt='logo' src={fuslogo} />
+            </Link>
           </ListItem>
-          {form}
-          <Divider />
-    
-          <ListItem
-            button
-            className={classes.btn}
-            onClick={this.props.toggleDrawer}
+          <IconButton
+            className={classes.navIconHide}
+            onClick={this.props.handleDrawerClose}
           >
-            <ListItemText secondary={'Submit Announcement'} />
-          </ListItem>
-          <Divider />
-          */}
+            <ChevronLeftIcon />
+          </IconButton>
         </div>
+        <Divider />
+        <Link to='/' className={classes.link}>
+          <ListItem button>
+            <ListItemText secondary='Current Bulletin' />
+          </ListItem>
+        </Link>
+        <Divider />
+        {/*
+        <Link to='/category/time-sensitive' className={classes.link}>
+          <ListItem button>
+            <ListItemIcon>
+              <AlarmClock />
+            </ListItemIcon>
+            <ListItemText secondary='Take Action' />
+          </ListItem>
+        </Link>
+        <Divider />
+    */}
+        <ListSubheader style={{backgroundColor: 'white'}}>Categories</ListSubheader>
+        {displayCategories(this.props)}
+        <Divider />
+        {/*
+        <ListItem button onClick={this.toggleForm}>
+          <ListItemIcon>
+            <ClockIcon />
+          </ListItemIcon>
+          <ListItemText secondary='Filter By Date' />
+        </ListItem>
+        {form}
+        <Divider />
+  
+        <ListItem
+          button
+          className={classes.btn}
+          onClick={this.props.toggleDrawer}
+        >
+          <ListItemText secondary={'Submit Announcement'} />
+        </ListItem>
+        <Divider />
+        */}
       </div>
     )
     return (
