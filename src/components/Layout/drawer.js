@@ -27,7 +27,7 @@ const displayCategories = props => {
   if (data.loading) return
 
   return (
-    <div>
+    <div style="height: auto; min-height: 103vh; padding-bottom: 3em;">
       <Link to={`/all`} className={classes.link}>
         <ListItem button>
           <ListItemText secondary={`All`} />
@@ -59,9 +59,6 @@ class SideComponent extends Component {
     year: '',
     formStyles: {
       display: 'none'
-    },
-    urmom: {
-      paddingBottom: '2em'
     }
   }
   handleChange = name => event => {

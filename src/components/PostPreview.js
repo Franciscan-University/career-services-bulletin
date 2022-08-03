@@ -50,6 +50,9 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     marginBottom: '5px'
+  },
+  iconStyle: {
+    marginRight: '2px'
   }
 }
 
