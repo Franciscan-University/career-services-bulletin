@@ -7,6 +7,9 @@ import { withStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
 import { Link } from 'react-router-dom'
 import SanitizedHTML from 'react-sanitized-html'
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import RoomIcon from '@material-ui/icons/Room';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
 
 const styles = {
   card: {
