@@ -12,6 +12,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment';
 import RoomIcon from '@material-ui/icons/Room';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import Button from '@material-ui/core/Button'
+import Link from '@material-ui/core/Link'
 import { withRouter } from 'react-router-dom'
 import SanitizedHTML from 'react-sanitized-html'
 // import '../styles/app.css'
