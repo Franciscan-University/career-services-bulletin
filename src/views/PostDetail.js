@@ -67,6 +67,14 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   var docString = post.postBannerImg
   var docArray = docString.split(',');
+  var docNameArray = []
+  var docFileArray = []
+
+  for (var i=0; i<docArray.length; i++) {
+    var tempArray = docArray[i].split('|');
+    docNameArray.push(tempArray[0]);
+    docFileArray.push(tempArray[1]);
+  }
 
   return (
     <div>
@@ -105,18 +113,19 @@ const RenderPost = ({ data, classes, ...props }) => {
           <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInput}
         </Typography>
         }
-        
-      <Typography>
-      {docArray.map(function(name, index){
-        return <Typography key={index}>{name}</Typography>
-      })}
-      </Typography>
 
       <Typography
         type='body2'
         component='div'
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
+      <Typography>
+      {docArray.map(function(name, index){
+        return <Link key={index} href="{name}">{name} - {index}</Link>
+      })}
+      </Typography>
+
       <Button onClick={props.history.goBack}>
         <BackIcon />
         Go Back
