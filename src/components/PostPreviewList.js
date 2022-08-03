@@ -87,7 +87,8 @@ class PostPreviewList extends React.Component {
       slug,
       style,
       category,
-      view
+      view,
+      docString
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
     return (
