@@ -236,4 +236,4 @@ class SideComponent extends Component {
   ]
 }
 
-export default graphql(getAllCategories)(SideComponent)
+export default graphql(getAllCategories)(SideComponent)(withStyles(styles))
