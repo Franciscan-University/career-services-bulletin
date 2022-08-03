@@ -37,6 +37,10 @@ const styles = {
   printVAtt: {
     width: 'auto',
     fontSize: '18px'
+  },
+  descText: {
+    fontSize: '13px',
+    color: grey[500]
   }
 }
 
@@ -151,10 +155,10 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        <Typography paragraph='false' className={classes.dateColor} variant='overline'>
-        {jobTitleInput == 0 ? '' : <Typography paragraph='false' className={classes.dateColor}>{jobTitleInput}</Typography>} 
-        {jobLocationInput == 0 ? '' : <Typography paragraph='false' className={classes.dateColor}> | {jobLocationInput}</Typography>} 
-        {jobWorkdayInput == 0 ? '' : <Typography paragraph='false' className={classes.dateColor}> | {jobWorkdayInput}</Typography>}
+        <Typography paragraph='false' display='inline' className={classes.dateColor} variant='overline'>
+        {jobTitleInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}>{jobTitleInput}</Typography>} 
+        {jobLocationInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}> | {jobLocationInput}</Typography>} 
+        {jobWorkdayInput == 0 ? '' : <Typography paragraph='false' display='inline' className={classes.descText}> | {jobWorkdayInput}</Typography>}
         </Typography>
         <Typography component='div' variant='body2' gutterBottom>
           <div>

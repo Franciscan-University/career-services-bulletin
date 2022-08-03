@@ -47,6 +47,10 @@ const styles = {
   iconStyle: {
     marginRight: '2px'
   },
+  divider: {
+    marginTop: '2em',
+    marginBottom: '1em'
+  },
   attachmentStyle: {
     display: 'flex',
     marginBottom: '8px',
@@ -191,10 +195,10 @@ const CardView = ({
           </div>
         </Typography>
 
-        <Divider />
-
         {docString == '' ? <Typography></Typography> : 
+        
       <Typography>
+        <Divider className={classes.divider} />
       {docNameArray.map(function(name, index){
         return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</Link>
       })}
