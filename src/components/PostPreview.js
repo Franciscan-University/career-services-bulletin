@@ -44,6 +44,12 @@ const styles = {
   descText: {
     fontSize: '13px',
     color: grey[500]
+  },
+  jobTitleStyle: {
+    color: '#000000',
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '5px'
   }
 }
 

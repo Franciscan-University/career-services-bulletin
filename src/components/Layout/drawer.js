@@ -21,6 +21,12 @@ import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
 import fuslogo from './img/fuslogo.png'
 
+const styles = {
+  addedDrawerStyle: {
+    paddingBottom: '2em'
+  }
+}
+
 const displayCategories = props => {
   const { data, classes } = props
   if (data.loading) return
@@ -134,7 +140,7 @@ class SideComponent extends Component {
       </form>
     )
     const drawer = (
-      <div className={classes.drawerInner}>
+      <div className={`${classes.drawerInner} ${classes.addedDrawerStyle}`}>
         <div className={classes.drawerHeader}>
           <ListItem>
             <Link to='/all'>
