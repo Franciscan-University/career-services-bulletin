@@ -60,12 +60,12 @@ const CardImage = ({ mediaStyle, imageURL, slug }) => {
 class PostPreviewList extends React.Component {
   render () {
     var docString = postBannerImg
-    var docArray = docString.split(',');
+    var docArray = docString?.split(',');
     var docNameArray = []
     var docFileArray = []
 
     for (var i=0; i<docArray.length; i++) {
-      var tempArray = docArray[i].split('|');
+      var tempArray = docArray[i]?.split('|');
       docNameArray.push(tempArray[0]);
       docFileArray.push(tempArray[1]);
     }
