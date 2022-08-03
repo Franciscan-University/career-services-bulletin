@@ -48,7 +48,8 @@ const styles = {
     marginRight: '2px'
   },
   attachmentStyle: {
-    display: 'block'
+    display: 'flex',
+    marginBottom: '8px'
   }
 }
 
@@ -80,7 +81,12 @@ const RenderPost = ({ data, classes, ...props }) => {
     docNameArray.push(tempArray[0]);
     docFileArray.push(tempArray[1]);
   }
-  console.log(docNameArray)
+
+  var docNameFilter = docNameArray.filter(function (el) {
+    return el != '';
+  })
+
+  docNameArray = docNameFilter;
 
 
   return (
