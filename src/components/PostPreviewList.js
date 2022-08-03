@@ -5,6 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Typography from '@material-ui/core/Typography'
 import { withStyles } from '@material-ui/core/styles'
 import { blue, grey } from '@material-ui/core/colors'
+import Divider from '@material-ui/core/Divider';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import AttachmentIcon from '@material-ui/icons/Attachment';
 import RoomIcon from '@material-ui/icons/Room';
@@ -45,6 +46,11 @@ const styles = {
   },
   iconStyle: {
     marginRight: '2px'
+  },
+  attachmentStyle: {
+    display: 'flex',
+    marginBottom: '8px',
+    width: 'fit-content'
   }
 }
 
@@ -184,9 +190,10 @@ const CardView = ({
             />
           </div>
         </Typography>
-        <Typography>{docString} Hello there</Typography>
 
-        {docString == '' ? <Typography>{docString} hi</Typography> : 
+        <Divider />
+
+        {docString == '' ? <Typography></Typography> : 
       <Typography>
       {docNameArray.map(function(name, index){
         return <Link className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</Link>
