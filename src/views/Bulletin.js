@@ -33,7 +33,7 @@ const RenderHome = props => {
         query={getAllPosts}
         variables={{
           first: 50,
-          where: {
+          /*where: {
             dateQuery: {
               after: {
                 day: week.date(),
@@ -41,7 +41,7 @@ const RenderHome = props => {
                 year: week.year()
               }
             }
-          }
+          }*/
         }}
         {...props}
       />

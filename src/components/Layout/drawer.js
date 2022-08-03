@@ -27,7 +27,7 @@ const displayCategories = props => {
   if (data.loading) return
 
   return (
-    <div style={{height: 'auto', minHeight: '103vh', paddingBottom: '3em'}}>
+    <div style={{height: 'auto', paddingBottom: '3em'}}>
       <Link to={`/all`} className={classes.link}>
         <ListItem button>
           <ListItemText secondary={`All`} />
@@ -169,7 +169,6 @@ class SideComponent extends Component {
     */}
         <ListSubheader style={{backgroundColor: 'white'}}>Categories</ListSubheader>
         {displayCategories(this.props)}
-        <Divider />
         {/*
         <ListItem button onClick={this.toggleForm}>
           <ListItemIcon>

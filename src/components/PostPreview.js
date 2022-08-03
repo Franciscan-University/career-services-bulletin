@@ -186,7 +186,7 @@ const CardView = ({
 
         <Typography component='div' variant='body2' gutterBottom>
           <div>
-            <SanitizedHTML style={{ display: 'inline' }} html={content} />
+            <SanitizedHTML style={{ padding: '0.5em 0' }} html={content} />
             {cRead && (
               <Link className={classes.continue} to={`/post/${slug}`}>
                 {' '}
