@@ -60,7 +60,7 @@ const CardImage = ({ mediaStyle, imageURL, slug }) => {
 
 class PostPreviewList extends React.Component {
   render () {
-    var docString = post.node.postBannerImg
+    var docString = data.postBy.node.postBannerImg
     var docArray = docString?.split(',');
     var docNameArray = []
     var docFileArray = []
