@@ -64,13 +64,13 @@ class PostPreviewList extends React.Component {
     var docNameArray = []
     var docFileArray = []
 
-    for (var i=0; i<docArray.length; i++) {
+    for (var i=0; i<docArray?.length; i++) {
       var tempArray = docArray[i]?.split('|');
-      docNameArray.push(tempArray[0]);
-      docFileArray.push(tempArray[1]);
+      docNameArray?.push(tempArray[0]);
+      docFileArray?.push(tempArray[1]);
     }
 
-    var docNameFilter = docNameArray.filter(function (el) {
+    var docNameFilter = docNameArray?.filter(function (el) {
       return el != '';
     })
 
