@@ -117,9 +117,9 @@ const RenderPost = ({ data, classes, ...props }) => {
         {post.categories.edges[0].node.name.toUpperCase()}
       </Typography>
 
-      {post.categories.edges == '' ? <Typography></Typography> : 
+      {post.categories == '' ? <Typography></Typography> : 
       <Typography>
-      {post.categories.edges.map(function(name, index){
+      {post.categories.map(function(name, index){
         return <a className={classes.categoryColor} key={index} href={docFileArray[index]} target="_blank" rel="noopener"> {name}</a>
       })}
       </Typography>
