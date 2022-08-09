@@ -100,7 +100,7 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   docNameArray = docNameFilter;
 
-  catArray = post.categories;
+  var catArray = post.categories;
   console.log(catArray);
 
 
