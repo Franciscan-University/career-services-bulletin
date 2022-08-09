@@ -100,7 +100,7 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   docNameArray = docNameFilter;
 
-  var catArray = post.categories.edges;
+  var catArray = post.categories;
   console.log(catArray);
 
 
@@ -120,9 +120,9 @@ const RenderPost = ({ data, classes, ...props }) => {
         {post.categories.edges[0].node.name.toUpperCase()}
       </Typography>
 
-      {post.categories == '' ? <Typography></Typography> : 
+      {catArray == '' ? <Typography></Typography> : 
       <Typography>
-      {post.categories.map(function(name, index){
+      {catArray.map(function(name, index){
         return <a className={classes.categoryColor} key={index} href={index} target="_blank" rel="noopener"><AttachmentIcon /> {post.categories.edges[index].node.name.toUpperCase()}</a>
       })}
       </Typography>
