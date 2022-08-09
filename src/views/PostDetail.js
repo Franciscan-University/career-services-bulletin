@@ -116,6 +116,15 @@ const RenderPost = ({ data, classes, ...props }) => {
       <Typography type='caption' variant='h6' className={classes.categoryColor}>
         {post.categories.edges[0].node.name.toUpperCase()}
       </Typography>
+
+      {post.categories.edges == '' ? <Typography></Typography> : 
+      <Typography>
+      {post.categories.edges.map(function(name, index){
+        return <a className={classes.categoryColor} key={index} href={docFileArray[index]} target="_blank" rel="noopener"> {name}</a>
+      })}
+      </Typography>
+      }
+
       <Typography type='h5' className={classes.titleColor} variant='h4'>
         <SanitizedHTML html={post.title} />
       </Typography>
