@@ -110,7 +110,6 @@ class PostPreviewList extends React.Component {
     var catArray = [];
     var catArrayLim = '';
 
-    console.log(categoriesList)
     
     if (categoriesList.length > 3) {
       catArrayLim = 3;
