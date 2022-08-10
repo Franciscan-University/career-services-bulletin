@@ -143,7 +143,6 @@ class PostPreview extends React.Component {
             category={category}
             cRead={this.state.cRead}
             content={this.state.sanitized}
-            categories={categories}
             catString={catString}
           />
         ) : (
