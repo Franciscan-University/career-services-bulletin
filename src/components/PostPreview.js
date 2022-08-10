@@ -182,7 +182,7 @@ const CardView = ({
       <CardImage mediaStyle={classes.media} imageURL={imageURL} slug={slug} />
       <CardContent>
         <Typography variant='button' className={classes.categoryColor}>
-          {category}
+          {catString}
         </Typography>
         <Typography className={classes.titleColor} variant='h6'>
           <Link className={classes.link} to={`/post/${slug}`}>
