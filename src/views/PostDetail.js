@@ -114,7 +114,7 @@ const RenderPost = ({ data, classes, ...props }) => {
       )}
       {post.categories.edges[0].node.name != 'Full-time employment' || post.categories.edges[0].node.name != 'Part-time employment' }
       <Typography type='caption' variant='h6' className={classes.categoryColor}>
-        {post.categories.edges[0].node.name.toUpperCase()}
+        {post.categories.edges[0].node.name}
       </Typography>
 
 
