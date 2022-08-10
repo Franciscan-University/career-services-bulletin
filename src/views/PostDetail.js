@@ -94,7 +94,7 @@ const RenderPost = ({ data, classes, ...props }) => {
     docFileArray.push(tempArray[1]);
   }
 
-  console.log(post.categories)
+  console.log(post.categories.edges.length)
 
   var docNameFilter = docNameArray.filter(function (el) {
     return el != '';
