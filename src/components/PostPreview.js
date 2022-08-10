@@ -143,7 +143,7 @@ class PostPreview extends React.Component {
             category={category}
             cRead={this.state.cRead}
             content={this.state.sanitized}
-            catString={catString}
+            catString={catString} 
           />
         ) : (
           <PlainView
