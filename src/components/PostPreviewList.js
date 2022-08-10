@@ -24,7 +24,8 @@ const styles = {
     color: grey[500]
   },
   categoryColor: {
-    color: '#998643'
+    color: '#998643',
+    textDecoration: 'uppercase'
   },
   media: {
     height: 'auto',
@@ -83,6 +84,7 @@ class PostPreviewList extends React.Component {
       slug,
       style,
       category,
+      categories,
       view,
     } = this.props
     
@@ -105,23 +107,22 @@ class PostPreviewList extends React.Component {
     docNameArray = docNameFilter;
 
 
-    /*var catArray = [];
+    var catArray = [];
     var catArrayLim = '';
     
-    if (category.edges.length > 3) {
+    if (categories.length > 3) {
       catArrayLim = 3;
     } else {
-      catArrayLim = category.edges.length;
+      catArrayLim = categories.length;
     }
     for (var j=0; j<catArrayLim; j++) {
-      if (category.edges[j].node.name.toLowerCase() != 'full-time employment' &&
-      category.edges[j].node.name.toLowerCase() != 'part-time employment' &&
-      category.edges[j].node.name.toLowerCase() != 'internships') {
-        catArray.push(category.edges[j].node.name)
+      if (categories[j].node.name.toLowerCase() != 'full-time employment' &&
+      categories[j].node.name.toLowerCase() != 'part-time employment' &&
+      categories[j].node.name.toLowerCase() != 'internships') {
+        catArray.push(categories[j].node.name)
       }
     }
-    var catString = catArray.join(' \u2022 ')*/
-    console.log(category + ' list');
+    var catString = catArray.join(' \u2022 ');
 
     const postDate = new Date(date).toLocaleDateString()
     return (
@@ -143,6 +144,7 @@ class PostPreviewList extends React.Component {
             docString={docString}
             docNameArray={docNameArray}
             docFileArray={docFileArray}
+            catString={catString}
           />
         ) : (
           <PlainView
@@ -173,14 +175,15 @@ const CardView = ({
   content,
   docString,
   docNameArray,
-  docFileArray
+  docFileArray,
+  catString
 }) => (
   <div>
     <Card className={classes.card} style={style}>
       <CardImage mediaStyle={classes.media} imageURL={imageURL} slug={slug} />
       <CardContent>
         <Typography variant='button' className={classes.categoryColor}>
-          {category}
+          {catString}
         </Typography>
         <Typography className={classes.titleColor} variant='h6'>
           <Link className={classes.link} to={`/post/${slug}`}>
