@@ -143,7 +143,6 @@ class PostPreviewList extends React.Component {
             docString={docString}
             docNameArray={docNameArray}
             docFileArray={docFileArray}
-            catString={catString}
           />
         ) : (
           <PlainView
@@ -174,8 +173,7 @@ const CardView = ({
   content,
   docString,
   docNameArray,
-  docFileArray,
-  catString
+  docFileArray
 }) => (
   <div>
     <Card className={classes.card} style={style}>

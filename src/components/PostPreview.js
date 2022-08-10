@@ -143,7 +143,6 @@ class PostPreview extends React.Component {
             category={category}
             cRead={this.state.cRead}
             content={this.state.sanitized}
-            catString={catString}
           />
         ) : (
           <PlainView
@@ -171,8 +170,7 @@ const CardView = ({
   style,
   category,
   content,
-  cRead,
-  catString
+  cRead
 }) => (
   <div>
     <Card className={classes.card} style={style}>
