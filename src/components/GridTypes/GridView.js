@@ -57,7 +57,7 @@ class GridView extends React.Component {
                   jobWorkdayInput={post.node.jobWorkdayInput}
                   postBannerImg={post.node.postBannerImg}
                   category={post.node.categories.edges[1].node.name}
-                  categories_list={post.node.categories.edges}
+                  categoriesList={post.node.categories.edges}
                   content={post.node.excerpt}
                   trim
                 />
