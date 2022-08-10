@@ -112,7 +112,7 @@ const RenderPost = ({ data, classes, ...props }) => {
           src={post.featuredImage.sourceUrl}
         />
       )}
-      {(post.categories.edges[0].node.name != 'Full-time employment' || post.categories.edges[0].node.name != 'Part-time employment') &&
+      {(post.categories.edges[0].node.name != 'Full-time employment' && post.categories.edges[0].node.name != 'Part-time employment') &&
       <Typography type='caption' variant='h6' className={classes.categoryColor}>
         {post.categories.edges[0].node.name}
       </Typography>
