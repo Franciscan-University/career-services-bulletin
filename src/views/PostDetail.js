@@ -94,13 +94,22 @@ const RenderPost = ({ data, classes, ...props }) => {
     docFileArray.push(tempArray[1]);
   }
 
-  console.log(post.categories.edges.length)
-
   var docNameFilter = docNameArray.filter(function (el) {
     return el != '';
   })
 
   docNameArray = docNameFilter;
+
+
+  var catArray = [];
+  for (var j=0; j<post.categories.edges.length; j++) {
+    if (post.categories.edges[j].name.toLowerCase() != 'full-time employment' &&
+    post.categories.edges[j].name.toLowerCase() != 'part-time employment' &&
+    post.categories.edges[j].name.toLowerCase() != 'internships') {
+      catArray.push(post.categories.edges[j].name)
+    }
+  }
+  var catString = catArray.join(' \u2022 ')
 
   return (
     <div>
@@ -114,11 +123,9 @@ const RenderPost = ({ data, classes, ...props }) => {
           src={post.featuredImage.sourceUrl}
         />
       )}
-      {(post.categories.edges[0].node.name != 'Full-time employment' && 
-      post.categories.edges[0].node.name != 'Part-time employment' && 
-      post.categories.edges[0].node.name != 'Internship') &&
+      {post.categories.edges[0].node.name != '' && 
       <Typography type='caption' variant='h6' className={classes.categoryColor}>
-        {post.categories.edges[0].node.name}
+        {catString}
       </Typography>
       }
 
