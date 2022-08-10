@@ -107,7 +107,7 @@ class PostPreview extends React.Component {
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
 
-    var catArray = [];
+    /*var catArray = [];
     var catArrayLim = '';
     
     if (category.edges.length > 3) {
@@ -122,7 +122,8 @@ class PostPreview extends React.Component {
         catArray.push(category.edges[j].node.name)
       }
     }
-    var catString = catArray.join(' \u2022 ')
+    var catString = catArray.join(' \u2022 ')*/
+    console.log(category);
 
 
     return (
@@ -178,7 +179,7 @@ const CardView = ({
       <CardImage mediaStyle={classes.media} imageURL={imageURL} slug={slug} />
       <CardContent>
         <Typography variant='button' className={classes.categoryColor}>
-          {catString}
+          {category}
         </Typography>
         <Typography className={classes.titleColor} variant='h6'>
           <Link className={classes.link} to={`/post/${slug}`}>
