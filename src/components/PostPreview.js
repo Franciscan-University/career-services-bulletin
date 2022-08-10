@@ -141,6 +141,7 @@ class PostPreview extends React.Component {
             slug={slug}
             style={style}
             category={category}
+            categoriesList={categoriesList}
             cRead={this.state.cRead}
             content={this.state.sanitized}
             catString={catString} 

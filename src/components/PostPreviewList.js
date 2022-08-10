@@ -142,6 +142,7 @@ class PostPreviewList extends React.Component {
             slug={slug}
             style={style}
             category={category}
+            categoriesList={categoriesList}
             content={this.props.content}
             docString={docString}
             docNameArray={docNameArray}
