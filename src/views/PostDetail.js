@@ -103,10 +103,10 @@ const RenderPost = ({ data, classes, ...props }) => {
 
   var catArray = [];
   for (var j=0; j<post.categories.edges.length; j++) {
-    if (post.categories.edges[j].name.toLowerCase() != 'full-time employment' &&
-    post.categories.edges[j].name.toLowerCase() != 'part-time employment' &&
-    post.categories.edges[j].name.toLowerCase() != 'internships') {
-      catArray.push(post.categories.edges[j].name)
+    if (post.categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
+    post.categories.edges[j].node.name.toLowerCase() != 'part-time employment' &&
+    post.categories.edges[j].node.name.toLowerCase() != 'internships') {
+      catArray.push(post.categories.edges[j].node.name)
     }
   }
   var catString = catArray.join(' \u2022 ')
