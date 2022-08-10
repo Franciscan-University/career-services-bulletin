@@ -175,6 +175,7 @@ const CardView = ({
   id,
   style,
   category,
+  categoriesList,
   content,
   docString,
   docNameArray,
