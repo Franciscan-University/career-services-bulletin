@@ -108,24 +108,22 @@ class PostPreview extends React.Component {
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
 
-    /*var catArray = [];
+    var catArray = [];
     var catArrayLim = '';
     
-    if (category.edges.length > 3) {
+    if (categories.edges.length > 3) {
       catArrayLim = 3;
     } else {
-      catArrayLim = category.edges.length;
+      catArrayLim = categories.edges.length;
     }
     for (var j=0; j<catArrayLim; j++) {
-      if (category.edges[j].node.name.toLowerCase() != 'full-time employment' &&
-      category.edges[j].node.name.toLowerCase() != 'part-time employment' &&
-      category.edges[j].node.name.toLowerCase() != 'internships') {
-        catArray.push(category.edges[j].node.name)
+      if (categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
+      categories.edges[j].node.name.toLowerCase() != 'part-time employment' &&
+      categories.edges[j].node.name.toLowerCase() != 'internships') {
+        catArray.push(categories.edges[j].node.name)
       }
     }
-    var catString = catArray.join(' \u2022 ')*/
-    console.log(category);
-    console.log(categories);
+    var catString = catArray.join(' \u2022 ')
 
 
     return (
@@ -146,6 +144,7 @@ class PostPreview extends React.Component {
             cRead={this.state.cRead}
             content={this.state.sanitized}
             categories={categories}
+            catString={catString}
           />
         ) : (
           <PlainView
@@ -173,7 +172,8 @@ const CardView = ({
   style,
   category,
   content,
-  cRead
+  cRead,
+  catString
 }) => (
   <div>
     <Card className={classes.card} style={style}>
