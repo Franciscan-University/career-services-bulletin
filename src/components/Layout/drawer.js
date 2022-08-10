@@ -134,6 +134,12 @@ class SideComponent extends Component {
         </ListItem>
       </form>
     )
+
+    var getBackdrop = document.querySelector('.MuiBackdrop-root');
+    getBackdrop.addEventListener("click", function() {
+      this.props.handleDrawerClose;
+    })
+
     const drawer = (
       <div className={classes.drawerInner}>
         <div className={classes.drawerHeader}>
