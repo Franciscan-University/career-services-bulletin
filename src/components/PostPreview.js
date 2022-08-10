@@ -103,6 +103,7 @@ class PostPreview extends React.Component {
       slug,
       style,
       category,
+      categories,
       view
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
@@ -124,6 +125,7 @@ class PostPreview extends React.Component {
     }
     var catString = catArray.join(' \u2022 ')*/
     console.log(category);
+    console.log(categories);
 
 
     return (
@@ -143,6 +145,7 @@ class PostPreview extends React.Component {
             category={category}
             cRead={this.state.cRead}
             content={this.state.sanitized}
+            categories={categories}
           />
         ) : (
           <PlainView
