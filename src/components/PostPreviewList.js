@@ -84,7 +84,7 @@ class PostPreviewList extends React.Component {
       slug,
       style,
       category,
-      categories,
+      categories_list,
       view,
     } = this.props
     
