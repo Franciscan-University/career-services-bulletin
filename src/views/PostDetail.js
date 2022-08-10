@@ -31,7 +31,8 @@ const styles = {
     color: grey[500]
   },
   categoryColor: {
-    color: '#998643'
+    color: '#998643',
+    textDecoration: 'uppercase'
   },
   media: {
     height: 250
@@ -102,7 +103,14 @@ const RenderPost = ({ data, classes, ...props }) => {
 
 
   var catArray = [];
-  for (var j=0; j<post.categories.edges.length; j++) {
+  var catArrayLim = '';
+  
+  if (post.categories.edges.length > 3) {
+    catArrayLim = 3;
+  } else {
+    catArrayLim = post.categories.edges.length;
+  }
+  for (var j=0; j<catArrayLim; j++) {
     if (post.categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
     post.categories.edges[j].node.name.toLowerCase() != 'part-time employment' &&
     post.categories.edges[j].node.name.toLowerCase() != 'internships') {

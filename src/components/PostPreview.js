@@ -106,6 +106,25 @@ class PostPreview extends React.Component {
       view
     } = this.props
     const postDate = new Date(date).toLocaleDateString()
+
+    var catArray = [];
+    var catArrayLim = '';
+    
+    if (post.categories.edges.length > 3) {
+      catArrayLim = 3;
+    } else {
+      catArrayLim = post.categories.edges.length;
+    }
+    for (var j=0; j<catArrayLim; j++) {
+      if (post.categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
+      post.categories.edges[j].node.name.toLowerCase() != 'part-time employment' &&
+      post.categories.edges[j].node.name.toLowerCase() != 'internships') {
+        catArray.push(post.categories.edges[j].node.name)
+      }
+    }
+    var catString = catArray.join(' \u2022 ')
+
+
     return (
       <div>
         {view === 'card' ? (
@@ -123,6 +142,7 @@ class PostPreview extends React.Component {
             category={category}
             cRead={this.state.cRead}
             content={this.state.sanitized}
+            catString={catString}
           />
         ) : (
           <PlainView
@@ -150,14 +170,15 @@ const CardView = ({
   style,
   category,
   content,
-  cRead
+  cRead,
+  catString
 }) => (
   <div>
     <Card className={classes.card} style={style}>
       <CardImage mediaStyle={classes.media} imageURL={imageURL} slug={slug} />
       <CardContent>
         <Typography variant='button' className={classes.categoryColor}>
-          {category.toUpperCase()}
+          {catString}
         </Typography>
         <Typography className={classes.titleColor} variant='h6'>
           <Link className={classes.link} to={`/post/${slug}`}>
