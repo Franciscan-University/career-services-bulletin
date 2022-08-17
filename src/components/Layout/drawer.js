@@ -142,7 +142,6 @@ class SideComponent extends Component {
         console.log('hi');
       })
     } 
-    console.log(getBackdrop);
 
     const drawer = (
       <div className={classes.drawerInner}>
