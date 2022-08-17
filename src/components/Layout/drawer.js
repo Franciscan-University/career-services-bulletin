@@ -20,7 +20,7 @@ import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
 import fuslogo from './img/fuslogo.png'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 
 const displayCategories = props => {
