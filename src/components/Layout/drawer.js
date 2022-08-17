@@ -201,8 +201,9 @@ class SideComponent extends Component {
       </div>
     )
     return (
+      <ClickAwayListener onClickAway={this.props.handleDrawerToggle}>
       <div style={this.props.style}>
-        <ClickAwayListener onClickAway={this.props.handleDrawerToggle}>
+       
         <Hidden mdUp implementation='css'>
         
           <Drawer
@@ -221,7 +222,7 @@ class SideComponent extends Component {
           </Drawer>
           
         </Hidden>
-        </ClickAwayListener>
+        
         <Hidden smDown implementation='css'>
         {/*<ClickAwayListener onClickAway={this.props.handleDrawerToggle}>*/}
           <Drawer
@@ -237,6 +238,7 @@ class SideComponent extends Component {
         </Hidden>
         
       </div>
+      </ClickAwayListener>
     )
   }
   toggleForm = () => [
