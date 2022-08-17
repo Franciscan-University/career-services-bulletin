@@ -221,6 +221,7 @@ class SideComponent extends Component {
           </Drawer>
           
         </Hidden>
+        </ClickAwayListener>
         <Hidden smDown implementation='css'>
         {/*<ClickAwayListener onClickAway={this.props.handleDrawerToggle}>*/}
           <Drawer
@@ -234,7 +235,7 @@ class SideComponent extends Component {
           </Drawer>
           {/*</ClickAwayListener>*/}
         </Hidden>
-        </ClickAwayListener>
+        
       </div>
     )
   }
