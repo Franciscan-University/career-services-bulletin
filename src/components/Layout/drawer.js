@@ -202,8 +202,9 @@ class SideComponent extends Component {
     )
     return (
       <div style={this.props.style}>
-        <Hidden mdUp implementation='css'>
         <ClickAwayListener onClickAway={this.props.handleDrawerToggle}>
+        <Hidden mdUp implementation='css'>
+        
           <Drawer
             variant='temporary'
             open={this.props.open}
@@ -218,7 +219,7 @@ class SideComponent extends Component {
           >
             {drawer}
           </Drawer>
-          </ClickAwayListener>
+          
         </Hidden>
         <Hidden smDown implementation='css'>
         {/*<ClickAwayListener onClickAway={this.props.handleDrawerToggle}>*/}
@@ -233,6 +234,7 @@ class SideComponent extends Component {
           </Drawer>
           {/*</ClickAwayListener>*/}
         </Hidden>
+        </ClickAwayListener>
       </div>
     )
   }
