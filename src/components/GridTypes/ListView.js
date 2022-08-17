@@ -45,7 +45,7 @@ class ListView extends React.Component {
     return (
       <>
         <Grid container justify='center'>
-          <Grid item xs={12} sm={8} md={8}>
+          <Grid item xs={12} sm={8} md={12}>
             {this.props.posts.edges.map(post => (
               <PostPreviewList
                 view='card'
