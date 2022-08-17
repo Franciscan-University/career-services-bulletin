@@ -136,13 +136,10 @@ class SideComponent extends Component {
       </form>
     )
 
-    /*var getBackdrop = document.querySelector('.MuiBackdrop-root');
+    var getBackdrop = document.querySelector('.MuiBackdrop-root');
     if (getBackdrop != null) {
-      getBackdrop.addEventListener("click", function() {
-        {this.props.handleDrawerClose()};
-        console.log('hi');
-      })
-    } */
+      getBackdrop.addEventListener("click", {handleDrawerClose});
+    } 
 
     const drawer = (
       <div className={classes.drawerInner}>
@@ -201,7 +198,6 @@ class SideComponent extends Component {
       </div>
     )
     return (
-      <ClickAwayListener onClickAway={this.props.handleDrawerToggle}>
       <div style={this.props.style}>
        
         <Hidden mdUp implementation='css'>
@@ -236,9 +232,7 @@ class SideComponent extends Component {
           </Drawer>
           {/*</ClickAwayListener>*/}
         </Hidden>
-        
       </div>
-      </ClickAwayListener>
     )
   }
   toggleForm = () => [
