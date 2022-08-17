@@ -135,13 +135,13 @@ class SideComponent extends Component {
       </form>
     )
 
-    var getBackdrop = document.querySelector('.MuiBackdrop-root');
+    /*var getBackdrop = document.querySelector('.MuiBackdrop-root');
     if (getBackdrop != null) {
       getBackdrop.addEventListener("click", function() {
         {this.props.handleDrawerClose()};
         console.log('hi');
       })
-    } 
+    } */
 
     const drawer = (
       <div className={classes.drawerInner}>
@@ -212,6 +212,7 @@ class SideComponent extends Component {
             ModalProps={{
               keepMounted: true // Better open performance on mobile.
             }}
+            
           >
             {drawer}
           </Drawer>
