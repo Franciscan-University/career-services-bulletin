@@ -138,6 +138,7 @@ class SideComponent extends Component {
     var getBackdrop = document.querySelector('.MuiBackdrop-root');
     getBackdrop.addEventListener("click", function() {
       this.props.handleDrawerClose;
+      console.log('hi');
     })
 
     const drawer = (
