@@ -20,6 +20,7 @@ import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
 import Button from '@material-ui/core/Button'
 import fuslogo from './img/fuslogo.png'
+import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 
 
 const displayCategories = props => {
@@ -218,6 +219,7 @@ class SideComponent extends Component {
           </Drawer>
         </Hidden>
         <Hidden smDown implementation='css'>
+        <ClickAwayListener onClickAway={this.handleDrawerClose}>
           <Drawer
             variant='persistent'
             open
@@ -227,6 +229,7 @@ class SideComponent extends Component {
           >
             {drawer}
           </Drawer>
+          </ClickAwayListener>
         </Hidden>
       </div>
     )
