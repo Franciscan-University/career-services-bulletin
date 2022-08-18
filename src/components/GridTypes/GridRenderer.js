@@ -14,6 +14,7 @@ const GridRenderer = ({ viewtype, query, posts, variables, searchposts }) => {
       {({ data, loading, error, fetchMore }) => {
         if (error) return <p>{error.message}</p>
         const posts = searchposts || data.posts
+        const announcements = searchannouncements || data.announcements
         if (loading && !posts) return <Loader />
 
         if (posts && !posts.edges.length) {
