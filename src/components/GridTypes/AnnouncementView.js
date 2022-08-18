@@ -57,7 +57,7 @@ class ListView extends React.Component {
                 }
                 title={announcements.node.title}
                 category={announcements.node.categories.edges[0].node.name}
-                categoriesList={poannouncementsst.node.categories.edges}
+                categoriesList={announcements.node.categories.edges}
                 content={announcements.node.content}
               />
             ))}
