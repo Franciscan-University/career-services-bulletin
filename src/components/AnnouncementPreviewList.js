@@ -118,9 +118,6 @@ class AnnouncementPreviewList extends React.Component {
             category={category}
             categoriesList={categoriesList}
             content={this.props.content}
-            docString={docString}
-            docNameArray={docNameArray}
-            docFileArray={docFileArray}
             catString={catString}
           />
         ) : (
@@ -147,9 +144,6 @@ const CardView = ({
   category,
   categoriesList,
   content,
-  docString,
-  docNameArray,
-  docFileArray,
   catString
 }) => (
   <div>
@@ -167,21 +161,7 @@ const CardView = ({
         <Typography className={classes.dateColor} variant='overline'>
           {postDate}
         </Typography>
-        {jobTitleInput == 0 ? <Typography></Typography> : 
-        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInput}
-        </Typography>
-        }
-        {jobLocationInput == 0 ? <Typography></Typography> : 
-        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon className={classes.iconStyle} /> {jobLocationInput}
-        </Typography>
-        }
-        {jobWorkdayInput == 0 ? <Typography></Typography> : 
-        <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInput}
-        </Typography>
-        }
+        
         <Typography component='div' variant='body2' gutterBottom>
           <div className='list-view-single-announcement'>
             <Typography
@@ -190,16 +170,6 @@ const CardView = ({
             />
           </div>
         </Typography>
-
-        {docString == '' ? <Typography></Typography> : 
-        
-      <Typography>
-        <Divider className={classes.divider} />
-      {docNameArray.map(function(name, index){
-        return <a className={classes.attachmentStyle} key={index} href={docFileArray[index]} target="_blank" rel="noopener"><AttachmentIcon /> {name}</a>
-      })}
-      </Typography>
-      }
 
       </CardContent>
     </Card>
