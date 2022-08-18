@@ -6,7 +6,7 @@ import Query from 'react-apollo/Query'
 import Typography from '@material-ui/core/Typography'
 import Loader from '../Loader'
 
-const GridRenderer = ({ viewtype, query, posts, variables, searchposts }) => {
+const GridRenderer = ({ viewtype, query, posts, variables, searchposts, searchannouncements }) => {
   const grid = viewtype === 'grid'
 
   return posts == null ? (
