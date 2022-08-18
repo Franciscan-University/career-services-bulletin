@@ -60,7 +60,6 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
             {grid && (
               <GridView
                 loading={loading}
-                posts={posts}
                 announcements={announcements}
                 loadDone={false}
                 onLoadMore={loadMore}
@@ -69,7 +68,6 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
             {!grid && viewtype !== 'print' && (
               <ListView
                 loading={loading}
-                posts={posts}
                 announcements={announcements}
                 loadDone={false}
                 onLoadMore={loadMore}
@@ -81,9 +79,9 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
     </Query>
   ) : (
     <div>
-      {viewtype === 'print' && <PrintView posts={posts} loadDone />}
-      {grid && <GridView posts={posts} loadDone />}
-      {!grid && viewtype !== 'print' && <ListView posts={posts} loadDone />}
+      {viewtype === 'print' && <PrintView announcements={announcements} loadDone />}
+      {grid && <GridView announcements={announcements} loadDone />}
+      {!grid && viewtype !== 'print' && <ListView announcements={announcements} loadDone />}
     </div>
   )
 }
