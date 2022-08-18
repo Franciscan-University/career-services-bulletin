@@ -57,3 +57,22 @@ export const categoriesFragment = gql`
 `
 
 
+export const announcementFragment = gql`
+  fragment AnnouncementData on RootQueryToAnnouncementConnection {
+    pageInfo {
+      startCursor
+      endCursor
+      hasNextPage
+      hasPreviousPage
+    }
+    edges {
+      node {
+        id
+        name
+        slug
+      }
+    }
+  }
+`
+
+
