@@ -58,7 +58,7 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
               />
             )}
             {grid && (
-              <GridView
+              <AnnouncementView
                 loading={loading}
                 announcements={announcements}
                 loadDone={false}
@@ -66,7 +66,7 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
               />
             )}
             {!grid && viewtype !== 'print' && (
-              <ListView
+              <AnnouncementView
                 loading={loading}
                 announcements={announcements}
                 loadDone={false}
