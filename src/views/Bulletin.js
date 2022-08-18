@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
+import { getAllAnnouncements } from '../graphql/queries/announcements'
 
 const week = dayjs().subtract(7, 'day')
 
@@ -30,7 +31,7 @@ const RenderHome = props => {
         Current Bulletin
       </Typography>
       <GridRenderer
-        query={getAllPosts}
+        query={getAllAnnouncements}
         variables={{
           first: 50,
           where: {
