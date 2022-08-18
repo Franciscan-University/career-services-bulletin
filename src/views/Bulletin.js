@@ -30,7 +30,7 @@ const RenderHome = props => {
       <Typography variant='h6' gutterBottom>
         Current Bulletin
       </Typography>
-      <GridRenderer
+      <AnnouncementRenderer
         query={getAllAnnouncements}
         variables={{
           first: 50,
