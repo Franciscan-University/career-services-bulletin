@@ -143,8 +143,7 @@ const CardView = ({
   style,
   category,
   categoriesList,
-  content,
-  catString
+  content
 }) => (
   <div>
     <Card className={classes.card} style={style}>
