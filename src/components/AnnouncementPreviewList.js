@@ -90,7 +90,7 @@ class AnnouncementPreviewList extends React.Component {
     var catArrayLim = '';
 
     
-    if (categoriesList.length > 3) {
+    /*if (categoriesList.length > 3) {
       catArrayLim = 3;
     } else {
       catArrayLim = categoriesList.length;
@@ -102,7 +102,7 @@ class AnnouncementPreviewList extends React.Component {
         catArray.push(categoriesList[j].node.name)
       }
     }
-    var catString = catArray.join(' \u2022 ');
+    var catString = catArray.join(' \u2022 ');*/
 
     const postDate = new Date(date).toLocaleDateString()
     return (
@@ -111,14 +111,14 @@ class AnnouncementPreviewList extends React.Component {
           <CardView
             classes={classes}
             title={title}
-            imageURL={imageURL}
+            //imageURL={imageURL}
             postDate={postDate}
             slug={slug}
             style={style}
-            category={category}
-            categoriesList={categoriesList}
+            //category={category}
+            //categoriesList={categoriesList}
             content={this.props.content}
-            catString={catString}
+            //catString={catString}
           />
         ) : (
           <PlainView
@@ -150,9 +150,6 @@ const CardView = ({
     <Card className={classes.card} style={style}>
       <CardImage mediaStyle={classes.media} imageURL={imageURL} slug={slug} />
       <CardContent>
-        <Typography variant='button' className={classes.categoryColor}>
-          {catString}
-        </Typography>
         <Typography className={classes.titleColor} variant='h6'>
           <Link className={classes.link} to={`/announcement/${slug}`}>
             <SanitizedHTML html={title} />
