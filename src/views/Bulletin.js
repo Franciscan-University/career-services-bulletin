@@ -49,7 +49,7 @@ const RenderHome = props => {
       <Box display='flex' justifyContent='center' alignItems='center'>
         <Link to={`/all`} className='view-all-posts'>
           <Button variant='text' className='view-all-button'>
-            View All Posts
+            View Job Board
           </Button>
         </Link>
       </Box>
