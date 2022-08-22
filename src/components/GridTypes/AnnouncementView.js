@@ -52,12 +52,12 @@ class ListView extends React.Component {
                 key={announcements.node.slug}
                 slug={announcements.node.slug}
                 date={announcements.node.date}
-                imageURL={
-                  announcements.node.featuredImage && announcements.node.featuredImage.sourceUrl
-                }
+                //imageURL={
+                 // announcements.node.featuredImage && announcements.node.featuredImage.sourceUrl
+                //}
                 title={announcements.node.title}
-                category={announcements.node.categories.edges[0].node.name}
-                categoriesList={announcements.node.categories.edges}
+                //category={announcements.node.categories.edges[0].node.name}
+                //categoriesList={announcements.node.categories.edges}
                 content={announcements.node.content}
               />
             ))}
