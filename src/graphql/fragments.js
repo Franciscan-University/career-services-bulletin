@@ -68,8 +68,24 @@ export const announcementFragment = gql`
     edges {
       node {
         id
-        name
+        title
+        date
         slug
+        excerpt
+        content
+        categories {
+          edges {
+            node {
+              id
+              name
+            }
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
       }
     }
   }
