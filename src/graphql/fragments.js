@@ -71,21 +71,7 @@ export const announcementFragment = gql`
         title
         date
         slug
-        excerpt
         content
-        categories {
-          edges {
-            node {
-              id
-              name
-            }
-          }
-        }
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
       }
     }
   }
