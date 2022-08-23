@@ -14,8 +14,9 @@ class PrintView extends React.Component {
   }
 
   handleOnScroll = () => {
-    console.log(this.props.posts);
+
     console.log(this.props.announcements + 'hi');
+    console.log(this.props.posts);
     // http://stackoverflow.com/questions/9439725/javascript-how-to-detect-if-browser-window-is-scrolled-to-bottom
     var scrollTop =
       (document.documentElement && document.documentElement.scrollTop) ||
