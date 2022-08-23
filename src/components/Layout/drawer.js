@@ -31,7 +31,7 @@ const displayCategories = props => {
     <div style={{height: 'auto', paddingBottom: '3em'}}>
       <Link to={`/all`} className={classes.link}>
         <ListItem button>
-          <ListItemText secondary={`All`} />
+          <ListItemText secondary={` Hi`} />
         </ListItem>
       </Link>
       {data &&
