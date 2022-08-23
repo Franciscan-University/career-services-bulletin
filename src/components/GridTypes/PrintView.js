@@ -29,9 +29,9 @@ class PrintView extends React.Component {
     var scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight
     if (scrolledToBottom) {
       if (
-        this.props.posts &&
-        this.props.posts.pageInfo &&
-        this.props.posts.pageInfo.hasNextPage
+        this.props.announcements &&
+        this.props.announcements.pageInfo &&
+        this.props.announcements.pageInfo.hasNextPage
       ) {
         this.props.onLoadMore()
       }
@@ -39,19 +39,19 @@ class PrintView extends React.Component {
   }
 
   render () {
-    if (!this.props.posts && this.props.loading) return <p>Loading....</p>
+    if (!this.props.announcements && this.props.loading) return <p>Loading....</p>
     return (
       <div>
         <Grid container justify='center'>
           <Grid item xs={12}>
-            {this.props.posts &&
-              this.props.posts.edges.map(post => (
+            {this.props.announcements &&
+              this.props.announcements.edges.map(post => (
                 <PostPreview
                   view='print'
-                  key={post.node.id}
-                  title={post.node.title}
-                  content={post.node.content}
-                  categoriesList={post.node.categories.edges}
+                  key={announcements.node.id}
+                  title={announcements.node.title}
+                  content={announcements.node.content}
+                  categoriesList={announcements.node.categories.edges}
                 />
               ))}
           </Grid>
