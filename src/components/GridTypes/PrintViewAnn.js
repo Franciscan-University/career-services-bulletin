@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import AnnouncementPreviewList from './AnnouncementPreviewList'
+import AnnouncementPreviewList from '../AnnouncementPreviewList'
 
 class PrintView extends React.Component {
   componentDidMount () {
