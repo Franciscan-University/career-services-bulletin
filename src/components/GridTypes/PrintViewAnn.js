@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import AnnouncementRenderer from './AnnouncementRenderer'
+import AnnouncementPreview from './AnnouncementPreview'
 
 class PrintView extends React.Component {
   componentDidMount () {
@@ -43,7 +43,7 @@ class PrintView extends React.Component {
           <Grid item xs={12}>
             {this.props.announcements &&
               this.props.announcements.edges.map(announcement => (
-                <AnnouncementRenderer
+                <AnnouncementPreview
                   view='print'
                   key={announcement.node.id}
                   title={announcement.node.title}
