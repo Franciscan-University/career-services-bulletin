@@ -1,6 +1,6 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import PostPreview from '../PostPreview'
+import AnnouncementRenderer from './AnnouncementRenderer'
 
 class PrintView extends React.Component {
   componentDidMount () {
@@ -26,9 +26,9 @@ class PrintView extends React.Component {
     var scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight
     if (scrolledToBottom) {
       if (
-        this.props.posts &&
-        this.props.posts.pageInfo &&
-        this.props.posts.pageInfo.hasNextPage
+        this.props.announcements &&
+        this.props.announcements.pageInfo &&
+        this.props.announcements.pageInfo.hasNextPage
       ) {
         this.props.onLoadMore()
       }
@@ -36,19 +36,19 @@ class PrintView extends React.Component {
   }
 
   render () {
-    if (!this.props.posts && this.props.loading) return <p>Loading....</p>
+    if (!this.props.announcements && this.props.loading) return <p>Loading....</p>
     return (
       <div>
         <Grid container justify='center'>
           <Grid item xs={12}>
-            {this.props.posts &&
-              this.props.posts.edges.map(post => (
-                <PostPreview
+            {this.props.announcements &&
+              this.props.announcements.edges.map(announcement => (
+                <AnnouncementRenderer
                   view='print'
-                  key={post.node.id}
-                  title={post.node.title}
-                  content={post.node.content}
-                  categoriesList={post.node.categories.edges}
+                  key={announcement.node.id}
+                  title={announcement.node.title}
+                  content={announcement.node.content}
+                  categoriesList={announcement.node.categories.edges}
                 />
               ))}
           </Grid>

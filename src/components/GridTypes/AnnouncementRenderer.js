@@ -51,7 +51,7 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
         return (
           <>
             {viewtype === 'print' && (
-              <PrintView
+              <PrintViewAnn
                 loading={loading}
                 announcements={announcements}
                 loadDone={false}
