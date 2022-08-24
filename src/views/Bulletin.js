@@ -69,6 +69,11 @@ function printBtnListener() {
           getPostsBtn[j].style.display = 'none';
         }
       }
+      else {
+        for (var j=0; j<getPostsBtn.length; j++) {
+          getPostsBtn[j].style.display = 'initial';
+        }
+      }
     }
   }
 }
