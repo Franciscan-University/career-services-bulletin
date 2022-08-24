@@ -59,12 +59,15 @@ const RenderHome = props => {
 }
 
 var getNoPrintBtn = document.getElementsByClassName('no-print');
+var getPostsBtn = document.getElementsByClassName('view-all-posts')
 
 function printBtnListener() {
   if (getNoPrintBtn != null) {
     for (var i=0; i<getNoPrintBtn.length; i++) {
-      if (getNoPrintBtn.style.position == 'absolute') {
-        console.log('getNoPrintBtn');
+      if (getNoPrintBtn[i].style.position == 'absolute') {
+        for (var j=0; j<getPostsBtn.length; j++) {
+          getPostsBtn[j].style.display = 'none';
+        }
       }
     }
   }
