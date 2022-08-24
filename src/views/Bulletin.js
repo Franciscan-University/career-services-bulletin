@@ -59,11 +59,12 @@ const RenderHome = props => {
 }
 
 var getNoPrintBtn = document.querySelector('.no-print');
-console.log(getNoPrintBtn);
 
 function printBtnListener() {
-  if (getNoPrintBtn.style.display != 'none') {
-    console.log('whaddup');
+  if (getNoPrintBtn != null) {
+    if (getNoPrintBtn.style.display != 'none') {
+      console.log('getNoPrintBtn');
+    }
   }
 }
 
