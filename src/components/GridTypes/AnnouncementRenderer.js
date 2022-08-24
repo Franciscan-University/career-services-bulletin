@@ -4,6 +4,7 @@ import ListView from './ListView'
 import PrintView from './PrintView'
 import PrintViewAnn from './PrintViewAnn'
 import AnnouncementView from './AnnouncementView'
+import AnnouncementGridView from './AnnouncementGridView'
 import Query from 'react-apollo/Query'
 import Typography from '@material-ui/core/Typography'
 import Loader from '../Loader'
@@ -60,7 +61,7 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
               />
             )}
             {grid && (
-              <AnnouncementView
+              <AnnouncementGridView
                 loading={loading}
                 announcements={announcements}
                 loadDone={false}

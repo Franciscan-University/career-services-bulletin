@@ -54,7 +54,6 @@ const GridRenderer = ({ viewtype, query, posts, variables, searchposts, searchan
               <PrintView
                 loading={loading}
                 posts={posts}
-                announcements={announcements}
                 loadDone={false}
                 onLoadMore={loadMore}
               />
@@ -63,7 +62,6 @@ const GridRenderer = ({ viewtype, query, posts, variables, searchposts, searchan
               <GridView
                 loading={loading}
                 posts={posts}
-                announcements={announcements}
                 loadDone={false}
                 onLoadMore={loadMore}
               />
@@ -72,7 +70,6 @@ const GridRenderer = ({ viewtype, query, posts, variables, searchposts, searchan
               <ListView
                 loading={loading}
                 posts={posts}
-                announcements={announcements}
                 loadDone={false}
                 onLoadMore={loadMore}
               />
