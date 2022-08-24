@@ -21,6 +21,8 @@ const Bulletin = ({ data, viewtype, searchposts }) => {
   )
 }
 
+console.log(viewtype)
+
 const RenderHome = props => {
   return (
     <div>
@@ -49,7 +51,7 @@ const RenderHome = props => {
       <Box display='flex' justifyContent='center' alignItems='center'>
         <Link to={`/all`} className='view-all-posts'>
           <Button variant='text' className='view-all-button'>
-            View Job Board {viewtype}
+            View Job Board
           </Button>
         </Link>
       </Box>
