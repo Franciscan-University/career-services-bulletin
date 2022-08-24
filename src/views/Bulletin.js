@@ -13,7 +13,7 @@ import { getAllAnnouncements } from '../graphql/queries/announcements'
 const week = dayjs().subtract(7, 'day')
 
 const Bulletin = ({ data, viewtype, searchposts }) => {
-  console.log(viewtype);
+  console.log({viewtype});
   return (
     <Layout>
       <RenderHome data={data} viewtype={viewtype} searchposts={searchposts} />
