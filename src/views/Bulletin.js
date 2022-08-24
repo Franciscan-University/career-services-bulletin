@@ -61,10 +61,9 @@ const RenderHome = props => {
 var getNoPrintBtn = document.getElementsByClassName('no-print');
 
 function printBtnListener() {
-  console.log(getNoPrintBtn);
   if (getNoPrintBtn != null) {
     for (var i=0; i<getNoPrintBtn.length; i++) {
-      if (getNoPrintBtn.style.display != 'none') {
+      if (getNoPrintBtn.style.position == 'absolute') {
         console.log('getNoPrintBtn');
       }
     }
