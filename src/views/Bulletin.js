@@ -63,8 +63,10 @@ var getNoPrintBtn = document.getElementsByClassName('no-print');
 function printBtnListener() {
   console.log(getNoPrintBtn);
   if (getNoPrintBtn != null) {
-    if (getNoPrintBtn.style.display != 'none') {
-      console.log('getNoPrintBtn');
+    for (var i=0; i<getNoPrintBtn.length; i++) {
+      if (getNoPrintBtn.style.display != 'none') {
+        console.log('getNoPrintBtn');
+      }
     }
   }
 }
