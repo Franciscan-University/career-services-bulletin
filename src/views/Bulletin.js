@@ -13,7 +13,6 @@ import { getAllAnnouncements } from '../graphql/queries/announcements'
 const week = dayjs().subtract(7, 'day')
 
 const Bulletin = ({ data, viewtype, searchposts }) => {
-  console.log({viewtype});
   return (
     <Layout>
       <RenderHome data={data} viewtype={viewtype} searchposts={searchposts} />
@@ -58,5 +57,16 @@ const RenderHome = props => {
     </div>
   )
 }
+
+console.log('hi');
+var getNoPrintBtn = document.querySelector('.no-print');
+
+function printBtnListener() {
+  if (getNoPrintBtn.style.display != 'none') {
+    console.log('whaddup');
+  }
+}
+
+setInterval(printBtnListener, 100);
 
 export default Bulletin
