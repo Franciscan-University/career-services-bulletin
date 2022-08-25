@@ -58,7 +58,7 @@ const RenderHome = props => {
   )
 }
 
-/*var getNoPrintBtn = document.getElementsByClassName('no-print');
+var getNoPrintBtn = document.getElementsByClassName('no-print');
 var getPostsBtn = document.getElementsByClassName('view-all-posts')
 
 function printBtnListener() {
@@ -78,6 +78,6 @@ function printBtnListener() {
   }
 }
 
-setInterval(printBtnListener, 100);*/
+setInterval(printBtnListener, 100);
 
 export default Bulletin
