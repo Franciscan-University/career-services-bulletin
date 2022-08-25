@@ -42,10 +42,11 @@ class GridView extends React.Component {
       <div className='row'>
         <div className='container-fluid'>
           <Masonry>
-            
+
             {this.props.posts.edges.map(post => (
-              <div className='col s12 m12 l6 xl4' key={post.node.slug}>
+              <div className='col s12 m12 l6 xl4'>
                 <PostPreview
+                  key={post.node.slug}
                   view='card'
                   date={post.node.date}
                   imageURL={
