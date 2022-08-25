@@ -46,6 +46,7 @@ class GridView extends React.Component {
             {this.props.posts.edges.map(post => (
               <div className='col s12 m12 l6 xl4'>
                 <PostPreview
+                
                   key={post.node.slug}
                   view='card'
                   date={post.node.date}
