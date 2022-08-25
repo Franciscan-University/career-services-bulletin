@@ -61,7 +61,7 @@ const AnnouncementRenderer = ({ viewtype, query, announcements, variables, searc
               />
             )}
             {grid && (
-              <AnnouncementGridView
+              <AnnouncementView
                 loading={loading}
                 announcements={announcements}
                 loadDone={false}
