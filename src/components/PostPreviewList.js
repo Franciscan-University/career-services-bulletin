@@ -112,7 +112,7 @@ class PostPreviewList extends React.Component {
 
     
     for (var j=0; j<categoriesList.length; j++) {
-      if (categoriesList[j].node.name.toLowerCase() != 'Uncategorized' &&
+      if (categoriesList[j].node.name.toLowerCase() != 'uncategorized' &&
       categoriesList[j].node.name.toLowerCase() != 'full-time employment' &&
       categoriesList[j].node.name.toLowerCase() != 'part-time employment' &&
       categoriesList[j].node.name.toLowerCase() != 'internships') {
