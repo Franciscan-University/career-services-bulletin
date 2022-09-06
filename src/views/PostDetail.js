@@ -111,7 +111,8 @@ const RenderPost = ({ data, classes, ...props }) => {
     catArrayLim = post.categories.edges.length;
   }
   for (var j=0; j<catArrayLim; j++) {
-    if (post.categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
+    if (post.categories.edges[j].node.name.toLowerCase() != 'uncategorized' &&
+    post.categories.edges[j].node.name.toLowerCase() != 'full-time employment' &&
     post.categories.edges[j].node.name.toLowerCase() != 'part-time employment' &&
     post.categories.edges[j].node.name.toLowerCase() != 'internships') {
       catArray.push(post.categories.edges[j].node.name)
