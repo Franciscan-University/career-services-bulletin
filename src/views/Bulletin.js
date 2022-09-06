@@ -33,7 +33,7 @@ const RenderHome = props => {
       <GridRenderer
         query={getAllPosts}
         variables={{
-          first: 50,
+          first: 5,
           /*where: {
             dateQuery: {
               after: {

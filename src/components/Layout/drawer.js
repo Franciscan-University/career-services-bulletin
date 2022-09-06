@@ -159,7 +159,7 @@ class SideComponent extends Component {
         <Divider />
         <Link to='/' className={classes.link}>
           <ListItem button>
-            <ListItemText secondary='Current Bulletin' />
+            <ListItemText secondary='Recent Postings' />
           </ListItem>
         </Link>
         <Divider />
