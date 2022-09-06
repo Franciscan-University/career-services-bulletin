@@ -2,13 +2,13 @@ import React from 'react'
 import { getAllPosts } from '../graphql/queries/posts'
 import dayjs from 'dayjs'
 import Layout from '../components/Layout/index'
-import AnnouncementRenderer from '../components/GridTypes/AnnouncementRenderer'
+import GridRenderer from '../components/GridTypes/GridRenderer'
 import { Helmet } from 'react-helmet'
 import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
-import { getAllAnnouncements } from '../graphql/queries/announcements'
+import { getAllPosts } from '../graphql/queries/posts'
 
 const week = dayjs().subtract(7, 'day')
 
@@ -29,13 +29,13 @@ const RenderHome = props => {
         <title>Home | Bulletin - Franciscan University of Steubenville</title>
       </Helmet>
       <Typography variant='h6' gutterBottom>
-        Current Bulletin
+        Recent Postings
       </Typography>
-      <AnnouncementRenderer
-        query={getAllAnnouncements}
+      <GridRenderer
+        query={getAllPosts}
         variables={{
           first: 50,
-          where: {
+          /*where: {
             dateQuery: {
               after: {
                 day: week.date(),
@@ -43,7 +43,7 @@ const RenderHome = props => {
                 year: week.year()
               }
             }
-          }
+          }*/
         }}
         {...props}
       />
