@@ -111,18 +111,21 @@ class PostPreview extends React.Component {
     var catArray = [];
     var catArrayLim = '';
     
-    if (categoriesList.length > 3) {
-      catArrayLim = 3;
-    } else {
-      catArrayLim = categoriesList.length;
-    }
-    for (var j=0; j<catArrayLim; j++) {
-      if (categoriesList[j].node.name.toLowerCase() != 'full-time employment' &&
+    for (var j=0; j<categoriesList.length; j++) {
+      if (categoriesList[j].node.name.toLowerCase() != 'Uncategorized' &&
+      categoriesList[j].node.name.toLowerCase() != 'full-time employment' &&
       categoriesList[j].node.name.toLowerCase() != 'part-time employment' &&
       categoriesList[j].node.name.toLowerCase() != 'internships') {
         catArray.push(categoriesList[j].node.name)
       }
     }
+
+    if (catArrayLim.length > 3) {
+      catArrayLim = 3;
+    } else {
+      catArrayLim = categoriesList.length;
+    }
+    
     var catString = catArray.join(' \u2022 ');
 
 
