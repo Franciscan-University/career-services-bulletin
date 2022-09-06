@@ -8,7 +8,6 @@ import Button from '@material-ui/core/Button'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import { Link } from 'react-router-dom'
-import { getAllPosts } from '../graphql/queries/posts'
 
 const week = dayjs().subtract(7, 'day')
 
