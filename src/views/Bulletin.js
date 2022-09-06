@@ -28,12 +28,12 @@ const RenderHome = props => {
         <title>Home | Bulletin - Franciscan University of Steubenville</title>
       </Helmet>
       <Typography variant='h6' gutterBottom>
-        Recent Postings
+        All Job Postings
       </Typography>
       <GridRenderer
         query={getAllPosts}
         variables={{
-          first: 5,
+          first: 10,
           /*where: {
             dateQuery: {
               after: {

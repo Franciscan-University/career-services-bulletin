@@ -29,11 +29,11 @@ const displayCategories = props => {
 
   return (
     <div style={{height: 'auto', paddingBottom: '3em'}}>
-      <Link to={`/all`} className={classes.link}>
+      {/*<Link to={`/all`} className={classes.link}>
         <ListItem button>
           <ListItemText secondary={`All Job Postings`} />
         </ListItem>
-      </Link>
+  </Link>*/}
       {data &&
         data.categories &&
         data.categories.edges &&
