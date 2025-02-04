@@ -128,6 +128,10 @@ class PostPreviewList extends React.Component {
 
     var catString = catArray.join(' \u2022 ');
 
+    jobTitleInput.replace('&amp' , '&');
+    jobLocationInput.replace('&amp' , '&');
+    jobWorkdayInput.replace('&amp' , '&');
+
     const postDate = new Date(date).toLocaleDateString()
     return (
       <div>
