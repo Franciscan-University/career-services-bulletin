@@ -128,6 +128,8 @@ class PostPreview extends React.Component {
 
     var catString = catArray.join(' \u2022 ');
 
+    title.replace('&amp' , '&');
+
 
     return (
       <div>
