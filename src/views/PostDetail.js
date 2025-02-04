@@ -118,7 +118,13 @@ const RenderPost = ({ data, classes, ...props }) => {
       catArray.push(post.categories.edges[j].node.name)
     }
   }
-  var catString = catArray.join(' \u2022 ')
+  var catString = catArray.join(' \u2022 ');
+
+  jobTitleInput.replace("&#039;" , "'");
+  jobLocationInput.replace("&#039;" , "'");
+  jobWorkdayInput.replace("&#039;" , "'");
+
+  console.log(jobLocationInput);
 
   return (
     <div>

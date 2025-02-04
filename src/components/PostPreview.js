@@ -132,6 +132,8 @@ class PostPreview extends React.Component {
     jobLocationInput.replace("&#039;" , "'");
     jobWorkdayInput.replace("&#039;" , "'");
 
+    console.log(jobLocationInput);
+
 
     return (
       <div>
