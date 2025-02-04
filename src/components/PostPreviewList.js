@@ -154,6 +154,9 @@ class PostPreviewList extends React.Component {
             docNameArray={docNameArray}
             docFileArray={docFileArray}
             catString={catString}
+            jobTitleInputDecoded={jobTitleInputDecoded}
+            jobLocationInputDecoded={jobLocationInputDecoded}
+            jobWorkdayInputDecoded={jobWorkdayInputDecoded}
           />
         ) : (
           <PlainView

@@ -152,6 +152,9 @@ class PostPreview extends React.Component {
             cRead={this.state.cRead}
             content={this.state.sanitized}
             catString={catString} 
+            jobTitleInputDecoded={jobTitleInputDecoded}
+            jobLocationInputDecoded={jobLocationInputDecoded}
+            jobWorkdayInputDecoded={jobWorkdayInputDecoded}
           />
         ) : (
           <PlainView
