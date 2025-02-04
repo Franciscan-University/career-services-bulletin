@@ -140,8 +140,8 @@ class PostPreviewList extends React.Component {
             classes={classes}
             title={title}
             jobTitleInput={jobTitleInputDecoded}
-            jobLocationInput={jobLocationInput}
-            jobWorkdayInput={jobWorkdayInput}
+            jobLocationInput={jobLocationInputDecoded}
+            jobWorkdayInput={jobWorkdayInputDecoded}
             postBannerImg={postBannerImg}
             imageURL={imageURL}
             postDate={postDate}

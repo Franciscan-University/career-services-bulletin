@@ -120,9 +120,9 @@ const RenderPost = ({ data, classes, ...props }) => {
   }
   var catString = catArray.join(' \u2022 ');
 
-  var jobTitleInputDecoded = jobTitleInput.replace("&#039;" , "'");
-  var jobLocationInputDecoded = jobLocationInput.replace("&#039;" , "'");
-  var jobWorkdayInputDecoded = jobWorkdayInput.replace("&#039;" , "'");
+  var jobTitleInputDecoded = post.jobTitleInput.replace("&#039;" , "'");
+  var jobLocationInputDecoded = post.jobLocationInput.replace("&#039;" , "'");
+  var jobWorkdayInputDecoded = post.jobWorkdayInput.replace("&#039;" , "'");
 
 
   return (
