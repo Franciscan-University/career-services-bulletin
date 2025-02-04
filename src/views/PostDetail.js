@@ -152,17 +152,17 @@ const RenderPost = ({ data, classes, ...props }) => {
 
       {post.jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={`${classes.jobTitleStyle} ${classes.jobTitleStyleFirst}`} variant='overline'>
-          <AssignmentIcon className={classes.iconStyle} /> {post.jobTitleInputDecoded}
+          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInputDecoded}
         </Typography>
         }
         {post.jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon className={classes.iconStyle} /> {post.jobLocationInputDecoded}
+          <RoomIcon className={classes.iconStyle} /> {jobLocationInputDecoded}
         </Typography>
         }
         {post.jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInputDecoded}
+          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInputDecoded}
         </Typography>
         }
 
