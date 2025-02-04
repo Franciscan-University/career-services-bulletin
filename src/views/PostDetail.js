@@ -120,11 +120,10 @@ const RenderPost = ({ data, classes, ...props }) => {
   }
   var catString = catArray.join(' \u2022 ');
 
-  jobTitleInput.replace("&#039;" , "'");
-  jobLocationInput.replace("&#039;" , "'");
-  jobWorkdayInput.replace("&#039;" , "'");
+  var jobTitleInputDecoded = jobTitleInput.replace("&#039;" , "'");
+  var jobLocationInputDecoded = jobLocationInput.replace("&#039;" , "'");
+  var jobWorkdayInputDecoded = jobWorkdayInput.replace("&#039;" , "'");
 
-  console.log(jobLocationInput);
 
   return (
     <div>
@@ -153,17 +152,17 @@ const RenderPost = ({ data, classes, ...props }) => {
 
       {post.jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={`${classes.jobTitleStyle} ${classes.jobTitleStyleFirst}`} variant='overline'>
-          <AssignmentIcon className={classes.iconStyle} /> {post.jobTitleInput}
+          <AssignmentIcon className={classes.iconStyle} /> {post.jobTitleInputDecoded}
         </Typography>
         }
         {post.jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon className={classes.iconStyle} /> {post.jobLocationInput}
+          <RoomIcon className={classes.iconStyle} /> {post.jobLocationInputDecoded}
         </Typography>
         }
         {post.jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInput}
+          <AccessTimeIcon className={classes.iconStyle} /> {post.jobWorkdayInputDecoded}
         </Typography>
         }
 

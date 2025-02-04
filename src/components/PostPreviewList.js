@@ -128,9 +128,9 @@ class PostPreviewList extends React.Component {
 
     var catString = catArray.join(' \u2022 ');
 
-    jobTitleInput.replace("&#039;" , "'");
-    jobLocationInput.replace("&#039;" , "'");
-    jobWorkdayInput.replace("&#039;" , "'");
+    var jobTitleInputDecoded = jobTitleInput.replace("&#039;" , "'");
+    var jobLocationInputDecoded = jobLocationInput.replace("&#039;" , "'");
+    var jobWorkdayInputDecoded = jobWorkdayInput.replace("&#039;" , "'");
 
     const postDate = new Date(date).toLocaleDateString()
     return (
@@ -139,7 +139,7 @@ class PostPreviewList extends React.Component {
           <CardView
             classes={classes}
             title={title}
-            jobTitleInput={jobTitleInput}
+            jobTitleInput={jobTitleInputDecoded}
             jobLocationInput={jobLocationInput}
             jobWorkdayInput={jobWorkdayInput}
             postBannerImg={postBannerImg}
