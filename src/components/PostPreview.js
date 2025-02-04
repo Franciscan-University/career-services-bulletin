@@ -168,10 +168,10 @@ class PostPreview extends React.Component {
 const CardView = ({
   classes,
   title,
-  jobTitleInputDecoded,
-  jobLocationInputDecoded,
+  jobTitleInput,
+  jobLocationInput,
   postBannerImg,
-  jobWorkdayInputDecoded,
+  jobWorkdayInput,
   slug,
   imageURL,
   postDate,
@@ -200,17 +200,17 @@ const CardView = ({
 
         {jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={`${classes.jobTitleStyle} ${classes.jobTitleStyleFirst}`} variant='overline'>
-          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInputDecoded}
+          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInput}
         </Typography>
         }
         {jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon className={classes.iconStyle} /> {jobLocationInputDecoded}
+          <RoomIcon className={classes.iconStyle} /> {jobLocationInput}
         </Typography>
         }
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInputDecoded}
+          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInput}
         </Typography>
         }
 

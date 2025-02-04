@@ -171,9 +171,9 @@ class PostPreviewList extends React.Component {
 const CardView = ({
   classes,
   title,
-  jobTitleInputDecoded,
-  jobLocationInputDecoded,
-  jobWorkdayInputDecoded,
+  jobTitleInput,
+  jobLocationInput,
+  jobWorkdayInput,
   postBannerImg,
   slug,
   imageURL,
@@ -205,17 +205,17 @@ const CardView = ({
         </Typography>
         {jobTitleInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInputDecoded}
+          <AssignmentIcon className={classes.iconStyle} /> {jobTitleInput}
         </Typography>
         }
         {jobLocationInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <RoomIcon className={classes.iconStyle} /> {jobLocationInputDecoded}
+          <RoomIcon className={classes.iconStyle} /> {jobLocationInput}
         </Typography>
         }
         {jobWorkdayInput == 0 ? <Typography></Typography> : 
         <Typography paragraph='true' className={classes.jobTitleStyle} variant='overline'>
-          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInputDecoded}
+          <AccessTimeIcon className={classes.iconStyle} /> {jobWorkdayInput}
         </Typography>
         }
         <Typography component='div' variant='body2' gutterBottom>
