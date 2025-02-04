@@ -128,9 +128,9 @@ class PostPreview extends React.Component {
 
     var catString = catArray.join(' \u2022 ');
 
-    jobTitleInput.replace('&amp' , '&');
-    jobLocationInput.replace('&amp' , '&');
-    jobWorkdayInput.replace('&amp' , '&');
+    jobTitleInput.replace("&#039;" , "'");
+    jobLocationInput.replace("&#039;" , "'");
+    jobWorkdayInput.replace("&#039;" , "'");
 
 
     return (
