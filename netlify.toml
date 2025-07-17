@@ -1,0 +1,5 @@
+[[redirects]]
+    from = "/*"
+    to = "https://career-services.franciscan.online/"
+    status = 301
+    force = true
